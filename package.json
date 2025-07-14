@@ -39,7 +39,7 @@
     "commit": "czg",
     "dev": "turbo-run dev",
     "dev:docs": "pnpm -F @vben/docs run dev",
-    "dev:ele": "pnpm -F @vben/web-ele run dev",
+    "dev:ele": "pnpm -F @vben/app run dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",
     "postinstall": "pnpm -r run stub --if-present",

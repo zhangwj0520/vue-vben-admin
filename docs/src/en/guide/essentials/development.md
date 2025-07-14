@@ -57,7 +57,7 @@ The execution command is: `pnpm run [script]` or `npm run [script]`.
     // Build the documentation separately
     "build:docs": "pnpm run build --filter=@vben/docs",
     // Build the web-ele application separately
-    "build:ele": "pnpm run build --filter=@vben/web-ele",
+    "build:ele": "pnpm run build --filter=@vben/app",
     // Build the web-naive application separately
     "build:naive": "pnpm run build --filter=@vben/naive",
     // Build the playground application separately
@@ -85,7 +85,7 @@ The execution command is: `pnpm run [script]` or `npm run [script]`.
     // Start the documentation
     "dev:docs": "pnpm -F @vben/docs run dev",
     // Start the web-ele application
-    "dev:ele": "pnpm -F @vben/web-ele run dev",
+    "dev:ele": "pnpm -F @vben/app run dev",
     // Start the web-naive application
     "dev:naive": "pnpm -F @vben/web-naive run dev",
     // Start the playground application

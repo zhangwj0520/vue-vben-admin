@@ -9,7 +9,7 @@ defineOptions({ name: 'DemoIcons' });
     <div class="flex flex-wrap gap-5">
       <ElCard class="mb-5 w-auto">
         <template #header> icons </template>
-        <el-space>
+        <ElSpace>
           <span class="icon-[ep--setting] text-[100px]"></span>
           <span class="iconify ep--setting text-[100px]"></span>
           <span class="icon-[mdi-light--home] text-[100px]"></span>
@@ -25,7 +25,10 @@ defineOptions({ name: 'DemoIcons' });
           <div
             class="icon-[vscode-icons--file-type-access] hover:icon-[vscode-icons--file-type-access2] flex text-[100px]"
           ></div>
-        </el-space>
+          <el-button class="iconify-color text-[100px]" type="primary">
+            222
+          </el-button>
+        </ElSpace>
       </ElCard>
     </div>
   </Page>

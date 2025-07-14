@@ -49,3 +49,6 @@ vite.config.ts.*
 *.sln
 *.sw?
 .history
+
+app/src/typings/components.d.ts
+app/src/typings/auto-imports.d.ts
