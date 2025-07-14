@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import type { DrawerProps } from 'element-plus';
+
 import { h } from 'vue';
 
 import { Page, useVbenDrawer } from '@vben/common-ui';
-
-import { ElButton, ElCard, ElCheckbox, ElMessage } from 'element-plus';
 
 import { useVbenForm } from '#/adapter/form';
 import { getAllMenusApi } from '#/api';
@@ -169,6 +169,17 @@ function setFormValues() {
     select: 'B',
   });
 }
+const drawer = ref(false);
+const direction = ref<DrawerProps['direction']>('rtl');
+const handleClose = (done: () => void) => {
+  ElMessageBox.confirm('Are you sure you want to close this?')
+    .then(() => {
+      done();
+    })
+    .catch(() => {
+      // catch error
+    });
+};
 </script>
 <template>
   <Page
@@ -187,5 +198,16 @@ function setFormValues() {
       </template>
       <ElButton type="primary" @click="drawerApi.open"> 打开抽屉 </ElButton>
     </ElCard>
+    <ElButton type="primary" style="margin-left: 16px" @click="drawer = true">
+      open
+    </ElButton>
+    <el-drawer
+      v-model="drawer"
+      title="I am the title"
+      :direction="direction"
+      :before-close="handleClose"
+    >
+      <Form />
+    </el-drawer>
   </Page>
 </template>
