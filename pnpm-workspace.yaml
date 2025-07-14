@@ -10,10 +10,10 @@ packages:
   - packages/business/*
   - scripts/*
   - app
+  - mock
   # - apps/web-ele
 
   # - docs
-  # - playground
 
 catalog:
   '@ast-grep/napi': ^0.37.0
