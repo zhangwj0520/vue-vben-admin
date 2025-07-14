@@ -10,14 +10,12 @@
   },
   "license": "MIT",
   "type": "module",
-  "sideEffects": [
-    "**/*.css"
-  ],
   "exports": {
     ".": {
       "types": "./src/index.ts",
       "default": "./src/index.ts"
-    }
+    },
+    "./styles.css": "./src/styles.css"
   },
   "dependencies": {
     "@vben-core/composables": "workspace:*",
