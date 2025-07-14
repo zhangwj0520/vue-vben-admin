@@ -8,6 +8,7 @@ import type {
 } from '../typing';
 
 import viteVueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
+import tailwindcss from '@tailwindcss/vite';
 import viteVue from '@vitejs/plugin-vue';
 import viteVueJsx from '@vitejs/plugin-vue-jsx';
 import { visualizer as viteVisualizerPlugin } from 'rollup-plugin-visualizer';
@@ -78,6 +79,12 @@ async function loadCommonPlugins(
           gzipSize: true,
           open: true,
         })],
+    },
+    {
+      condition: true,
+      plugins: async () => {
+        return [await tailwindcss()];
+      },
     },
   ];
 }

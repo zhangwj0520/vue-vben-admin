@@ -8,10 +8,12 @@ packages:
   - packages/@core/*
   - packages/effects/*
   - packages/business/*
-  - apps/*
   - scripts/*
-  - docs
-  - playground
+  - app
+  # - apps/web-ele
+
+  # - docs
+  # - playground
 
 catalog:
   '@ast-grep/napi': ^0.37.0
@@ -37,6 +39,7 @@ catalog:
   '@stylistic/stylelint-plugin': ^3.1.3
   '@tailwindcss/nesting': 0.0.0-insiders.565cd3e
   '@tailwindcss/typography': ^0.5.16
+  "@tailwindcss/vite": ^4.1.11
   '@tanstack/vue-query': ^5.81.5
   '@tanstack/vue-store': ^0.7.1
   '@types/archiver': ^6.0.3

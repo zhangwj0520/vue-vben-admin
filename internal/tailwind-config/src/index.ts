@@ -1,6 +1,13 @@
 import type { Config } from 'tailwindcss';
 
+import path from 'node:path';
+
+import { addDynamicIconSelectors } from '@iconify/tailwind';
 import { getPackagesSync } from '@manypkg/get-packages';
+import typographyPlugin from '@tailwindcss/typography';
+import animate from 'tailwindcss-animate';
+
+import { enterAnimationPlugin } from './plugins/entry';
 
 // import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -109,12 +116,20 @@ const customColors = {
 };
 
 export default {
+  content: [
+    './index.html',
+    ...tailwindPackages.map((item) =>
+      path.join(item, 'src/**/*.{vue,js,ts,jsx,tsx,svelte,astro,html}'),
+    ),
+  ],
+  darkMode: 'selector',
   plugins: [
     animate,
     typographyPlugin,
     addDynamicIconSelectors(),
     enterAnimationPlugin,
   ],
+  prefix: '',
   theme: {
     container: {
       center: true,

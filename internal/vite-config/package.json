@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@pnpm/workspace.read-manifest": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "@types/archiver": "catalog:",
     "@types/html-minifier-terser": "catalog:",
     "@vben/node-utils": "workspace:*",
