@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* https://iconify.design/docs/usage/css/tailwind/tailwind4/ */
+@plugin '@iconify/tailwind4' {
+  prefix: 'icon';
+}
+
 @source '../../../../../effects/';
 @source '../../../../ui-kit/';
 @source '"../../../../../styles/"';

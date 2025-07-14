@@ -17,18 +17,18 @@ const routes: RouteRecordRaw[] = [
         meta: {
           title: $t('demos.elementPlus'),
         },
-        name: 'NaiveDemos',
+        name: 'EleDemos',
         path: '/demos/element',
         component: () => import('#/views/demos/element/index.vue'),
       },
-      // {
-      //   meta: {
-      //     title: $t('demos.icon'),
-      //   },
-      //   name: 'NaiveDemos',
-      //   path: '/demos/icons',
-      //   component: () => import('#/views/demos/element/index.vue'),
-      // },
+      {
+        meta: {
+          title: $t('demos.icon'),
+        },
+        name: 'IconDemos',
+        path: '/demos/icons',
+        component: () => import('#/views/demos/icons/index.vue'),
+      },
       {
         meta: {
           title: $t('demos.form'),

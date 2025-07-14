@@ -48,7 +48,7 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/vite": "catalog:",
     "unplugin-element-plus": "catalog:"
   }
 }

@@ -1,5 +1,4 @@
 {
-  "tailwindCSS.experimental.configFile": "internal/tailwind-config/src/index.ts",
   // workbench
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -9,7 +8,6 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 5,
-
   // editor
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
@@ -65,15 +63,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // extensions
-  "extensions.ignoreRecommendations": true,
-
+  "extensions.ignoreRecommendations": false,
   // terminal
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.stickyScroll.enabled": true,
-
   // files
   "files.eol": "\n",
   "files.insertFinalNewline": true,
@@ -82,10 +78,9 @@
     "*.ejs": "html",
     "*.art": "html",
     "**/tsconfig.json": "jsonc",
-    "*.json": "jsonc",
+    // "*.json": "jsonc",
     "package.json": "json"
   },
-
   "files.exclude": {
     "**/.eslintcache": true,
     "**/bower_components": true,
@@ -112,7 +107,6 @@
     "**/dist/**": true,
     "**/yarn.lock": true
   },
-
   // search
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "search.followSymlinks": false,
@@ -142,32 +136,25 @@
     "**/pnpm-lock.yaml": true,
     "**/yarn.lock": true
   },
-
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.ignoreTrimWhitespace": false,
   "npm.packageManager": "pnpm",
-
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-
   // extension
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
-
   "errorLens.enabledDiagnosticLevels": ["warning", "error"],
   "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
-
   "stylelint.enable": true,
   "stylelint.packageManager": "pnpm",
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
   "stylelint.customSyntax": "postcss-html",
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue"],
-
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "typescript.preferences.includePackageJsonAutoImports": "on",
-
   "eslint.validate": [
     "javascript",
     "typescript",
@@ -180,20 +167,13 @@
     "jsonc",
     "json5"
   ],
-
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
     "plaintext": false,
     "yaml": false
   },
-
   "cssVariables.lookupFiles": ["packages/core/base/design/src/**/*.css"],
-
   "i18n-ally.localesPaths": [
     "packages/locales/src/langs",
     "app/src/locales/langs"
@@ -206,7 +186,6 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sortKeys": true,
   "i18n-ally.namespace": true,
-
   // 控制相关文件嵌套展示
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -223,6 +202,12 @@
   "commentTranslate.multiLineMerge": true,
   "vue.server.hybridMode": true,
   "typescript.tsdk": "node_modules/typescript/lib",
+  "json.schemas": [
+    {
+      "fileMatch": ["/extensions.json"],
+      "url": "./extensions.schema.json"
+    }
+  ],
   "cSpell.words": [
     "archiver",
     "axios",
