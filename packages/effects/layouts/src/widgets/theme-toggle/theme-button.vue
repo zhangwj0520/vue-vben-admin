@@ -122,6 +122,8 @@ function toggleTheme(event: MouseEvent) {
 </template>
 
 <style scoped>
+/* @reference "tailwindcss"; */
+
 .theme-toggle {
   &__moon {
     & > circle {
@@ -130,18 +132,23 @@ function toggleTheme(event: MouseEvent) {
   }
 
   &__sun {
-    @apply fill-foreground/90 stroke-none;
+    fill: hsl(var(--foreground) / 90%);
 
+    /* @apply fill-foreground/90 stroke-none; */
+    stroke: none;
     transform-origin: center center;
     transition: transform 1.6s cubic-bezier(0.25, 0, 0.2, 1);
 
     &:hover > svg > & {
-      @apply fill-foreground/90;
+      fill: hsl(var(--foreground) / 90%);
     }
   }
 
   &__sun-beams {
-    @apply stroke-foreground/90 stroke-[2px];
+    stroke: hsl(var(--foreground) / 90%);
+    stroke-width: 2px;
+
+    /* @apply stroke-foreground/90 stroke-[2px]; */
 
     transform-origin: center center;
     transition:
@@ -149,13 +156,19 @@ function toggleTheme(event: MouseEvent) {
       opacity 0.6s cubic-bezier(0.25, 0, 0.3, 1);
 
     &:hover > svg > & {
-      @apply stroke-foreground;
+      stroke: hsl(var(--foreground));
     }
   }
 
   &.is-light {
     .theme-toggle__sun {
-      @apply scale-50;
+      /* @apply scale-50; */
+      --tw-scale-x: 0.5;
+      --tw-scale-y: 0.5;
+
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
     .theme-toggle__sun-beams {
@@ -171,14 +184,14 @@ function toggleTheme(event: MouseEvent) {
     }
 
     .theme-toggle__sun-beams {
-      @apply opacity-0;
+      opacity: 0;
     }
   }
 
   &:hover > svg {
     .theme-toggle__sun,
     .theme-toggle__moon {
-      @apply fill-foreground;
+      fill: hsl(var(--foreground));
     }
   }
 }

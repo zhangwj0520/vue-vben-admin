@@ -120,7 +120,7 @@ async function onBtnClick(value: ValueType) {
         (!props.multiple && loadingValues.length > 0)
       "
       v-bind="btnDefaultProps"
-      :variant="innerValue.includes(btn.value) ? 'default' : 'outline'"
+      :variant="innerValue.includes(btn.value) ? 'default' : 'outline-solid'"
       @click="onBtnClick(btn.value)"
       type="button"
     >

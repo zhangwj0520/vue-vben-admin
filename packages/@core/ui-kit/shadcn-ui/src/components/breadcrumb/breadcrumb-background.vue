@@ -33,7 +33,7 @@ function handleClick(index: number, path?: string) {
               <VbenIcon
                 v-if="showIcon"
                 :icon="item.icon"
-                class="mr-1 size-4 flex-shrink-0"
+                class="mr-1 size-4 shrink-0"
               />
               <span
                 :class="{
@@ -51,59 +51,83 @@ function handleClick(index: number, path?: string) {
 </template>
 <style scoped>
 li {
-  @apply h-7;
+  height: 1.75rem;
 }
 
 li a {
-  @apply text-muted-foreground bg-accent relative mr-9 flex h-7 items-center py-0 pl-[5px] pr-2 text-[13px];
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 1.75rem /* 28px */;
+  padding: 0 0.5rem 0 5px;
+  margin-right: 2.25rem /* 36px */;
+  font-size: 13px;
+  color: hsl(var(--muted-foreground));
+  background-color: hsl(var(--accent));
 }
 
 li a > span {
-  @apply -ml-3;
+  margin-left: -0.75rem /* -12px */;
 }
 
 li:first-child a > span {
-  @apply -ml-1;
+  margin-left: -0.25rem /* -4px */;
 }
 
 li:first-child a {
-  @apply rounded-[4px_0_0_4px] pl-[15px];
+  padding-left: 15px;
+  border-radius: 4px 0 0 4px;
 }
 
 li:first-child a::before {
-  @apply border-none;
+  border-style: none;
 }
 
 li:last-child a {
-  @apply rounded-[0_4px_4px_0] pr-[15px];
+  padding-right: 15px;
+  border-radius: 0 4px 4px 0;
 }
 
 li:last-child a::after {
-  @apply border-none;
+  border-style: none;
 }
 
 li a::before,
 li a::after {
-  @apply border-accent absolute top-0 h-0 w-0 border-[.875rem] border-solid content-[''];
+  --tw-content: '';
+
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  content: var(--tw-content);
+  border-color: hsl(var(--accent));
+  border-style: solid;
+  border-width: 0.875rem /* 14px */;
 }
 
 li a::before {
-  @apply -left-7 z-10 border-l-transparent;
+  left: -1.75rem /* -28px */;
+  z-index: 10;
+  border-left-color: transparent;
 }
 
 li a::after {
-  @apply border-l-accent left-full border-transparent;
+  left: 100%;
+  border-color: transparent;
+  border-left-color: hsl(var(--accent));
 }
 
 li:not(:last-child) a:hover {
-  @apply bg-accent-hover;
+  background-color: hsl(var(--accent-hover));
 }
 
 li:not(:last-child) a:hover::before {
-  @apply border-accent-hover border-l-transparent;
+  border-color: hsl(var(--accent-hover));
+  border-left-color: transparent;
 }
 
 li:not(:last-child) a:hover::after {
-  @apply border-l-accent-hover;
+  border-left-color: hsl(var(--accent-hover));
 }
 </style>

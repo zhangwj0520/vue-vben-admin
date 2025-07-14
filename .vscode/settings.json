@@ -237,5 +237,6 @@
     "nolebase",
     "rollup",
     "vitest"
-  ]
+  ],
+  "i18next.i18nPaths": "/Users/zhangweijie/vue/vben-copy/packages/locales,/Users/zhangweijie/vue/vben-copy/playground/src/locales,/Users/zhangweijie/vue/vben-copy/apps/web-antd/src/locales,/Users/zhangweijie/vue/vben-copy/apps/web-ele/src/locales,/Users/zhangweijie/vue/vben-copy/apps/web-naive/src/locales,/Users/zhangweijie/vue/vben-copy/packages/locales/src/langs,/Users/zhangweijie/vue/vben-copy/playground/src/locales/langs,/Users/zhangweijie/vue/vben-copy/apps/web-antd/src/locales/langs,/Users/zhangweijie/vue/vben-copy/apps/web-ele/src/locales/langs,/Users/zhangweijie/vue/vben-copy/apps/web-naive/src/locales/langs"
 }

@@ -1,3 +1,4 @@
+/* @reference "@vben-core/design/global.css"; */
 :root .vxe-grid {
   --vxe-ui-font-color: hsl(var(--foreground));
   --vxe-ui-font-primary-color: hsl(var(--primary));
@@ -82,7 +83,17 @@
 }
 
 .vxe-pager--wrapper {
-  @apply justify-center md:justify-end;
+  justify-content: center;
+  /* @apply justify-center md:justify-end; */
+}
+@media (min-width: 768px) {
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+  .vxe-pager--wrapper {
+    justify-content: flex-end;
+
+  }
 }
 
 .vxe-tools--operate {

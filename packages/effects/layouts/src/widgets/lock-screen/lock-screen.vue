@@ -81,7 +81,7 @@ useScrollLock();
 </script>
 
 <template>
-  <div class="bg-background fixed z-[2000] size-full">
+  <div class="bg-background fixed z-2000 size-full">
     <transition name="slide-left">
       <div v-show="!showUnlockForm" class="size-full">
         <div

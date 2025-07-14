@@ -253,7 +253,7 @@ defineExpose({
         :style="{ 'padding-left': `${item.level - 0.5}rem` }"
         :class="
           cn('cursor-pointer', getNodeClass?.(item), {
-            'data-[selected]:bg-accent': !multiple,
+            'data-selected:bg-accent': !multiple,
             'cursor-not-allowed': isNodeDisabled(item),
           })
         "
@@ -284,7 +284,7 @@ defineExpose({
             !isNodeDisabled(item) && onToggle(item);
           }
         "
-        class="tree-node focus:ring-grass8 my-0.5 flex items-center rounded px-2 py-1 outline-none focus:ring-2"
+        class="tree-node focus:ring-grass8 my-0.5 flex items-center rounded px-2 py-1 outline-hidden focus:ring-2"
       >
         <ChevronRight
           v-if="

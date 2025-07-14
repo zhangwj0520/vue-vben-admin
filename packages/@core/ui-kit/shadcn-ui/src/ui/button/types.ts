@@ -14,7 +14,7 @@ export type ButtonVariants =
   | 'heavy'
   | 'icon'
   | 'link'
-  | 'outline'
+  | 'outline-solid'
   | 'secondary'
   | null
   | undefined;
