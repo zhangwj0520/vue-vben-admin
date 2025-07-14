@@ -21,14 +21,14 @@ const routes: RouteRecordRaw[] = [
         path: '/demos/element',
         component: () => import('#/views/demos/element/index.vue'),
       },
-      {
-        meta: {
-          title: $t('demos.icon'),
-        },
-        name: 'NaiveDemos',
-        path: '/demos/icons',
-        component: () => import('#/views/demos/element/index.vue'),
-      },
+      // {
+      //   meta: {
+      //     title: $t('demos.icon'),
+      //   },
+      //   name: 'IconsDemos',
+      //   path: '/demos/icons',
+      //   component: () => import('#/views/demos/icons/index.vue'),
+      // },
       {
         meta: {
           title: $t('demos.form'),

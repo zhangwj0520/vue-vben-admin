@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@config './tailwind.config.mjs';
+
+@source '../../node_modules/@vben/layouts';
+@source '../../node_modules/@vben/common-ui';
+/* @source '../../node_modules/@vben-core/menu-ui';
+@source '../../node_modules/@vben-core/layout-ui';
+@source '../../node_modules/@vben-core/form-ui';
+@source '../../node_modules/@vben-core/popup-ui';
+@source '../../node_modules/@vben-core/shadcn-ui';
+@source '../../node_modules/@vben-core/tabs-ui'; */
+
+
+/* @source '../../../packages/effects/'
+@source '../../../packages/@core/ui-kit'; */
+
+@import './theme/default.css';
+@import './theme/dark.css';
+@import './element.css'
+@import './global.css';
+@import './transition.css';
+@import './nprogress.css';
+@import './ui.css';
+

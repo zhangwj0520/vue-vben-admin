@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@config './tailwind.config.mjs';
+
+@source '../../../packages/effects/'
+@source '../../../packages/@core/ui-kit';
+
+

@@ -1,6 +1,4 @@
-/* @source "./"; */
 @import 'tailwindcss';
-
 @source '../node_modules/@vben-core/menu-ui';
 @source '../node_modules/@vben-core/layout-ui';
 @source '../node_modules/@vben-core/form-ui';
