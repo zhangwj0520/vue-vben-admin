@@ -10,7 +10,7 @@
     },
     {
       "name": "@vben/web-ele",
-      "path": "apps/web-ele",
+      "path": "app",
     },
     {
       "name": "@vben/web-naive",
