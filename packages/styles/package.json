@@ -28,6 +28,9 @@
       "default": "./src/global/index.scss"
     }
   },
+  "peerDependencies": {
+    "element-plus": "catalog:"
+  },
   "dependencies": {
     "@vben-core/design": "workspace:*"
   }

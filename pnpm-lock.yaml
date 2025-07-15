@@ -1625,6 +1625,9 @@ importers:
       '@vben-core/design':
         specifier: workspace:*
         version: link:../@core/base/design
+      element-plus:
+        specifier: 'catalog:'
+        version: 2.10.2(vue@3.5.17(typescript@5.8.3))
 
   packages/types:
     dependencies:
