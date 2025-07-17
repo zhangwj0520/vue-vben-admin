@@ -1,5 +1,4 @@
 {
-  "tailwindCSS.experimental.configFile": "internal/tailwind-config/src/index.ts",
   // workbench
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -181,10 +180,6 @@
     "json",
     "jsonc",
     "json5"
-  ],
-
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
 
   "github.copilot.enable": {

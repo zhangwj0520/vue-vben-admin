@@ -22,7 +22,6 @@
 │   │   ├── prettier-config # Prettier 配置
 │   │   └── stylelint-config # Stylelint 配置
 │   ├── node-utils # Node.js 工具
-│   ├── tailwind-config # Tailwind 配置
 │   ├── tsconfig # 通用 tsconfig 配置
 │   └── vite-config # 通用Vite 配置
 ├── package.json # 项目依赖配置

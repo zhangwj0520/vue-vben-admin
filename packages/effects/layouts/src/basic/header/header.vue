@@ -158,7 +158,7 @@ function clearPreferencesAndLogout() {
           />
         </template>
         <template v-else-if="slot.name === 'theme-toggle'">
-          <ThemeToggle class="mr-1 mt-[2px]" />
+          <ThemeToggle class="mt-[2px] mr-1" />
         </template>
         <template v-else-if="slot.name === 'language-toggle'">
           <LanguageToggle class="mr-1" />

@@ -22,7 +22,6 @@ The directory uses Monorepo management, and the project structure is as follows:
 │   │   ├── prettier-config # Prettier configuration
 │   │   └── stylelint-config # Stylelint configuration
 │   ├── node-utils # Node.js tools
-│   ├── tailwind-config # Tailwind configuration
 │   ├── tsconfig # Common tsconfig settings
 │   └── vite-config # Common Vite configuration
 ├── package.json # Project dependency configuration
