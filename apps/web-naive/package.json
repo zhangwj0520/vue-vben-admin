@@ -26,6 +26,9 @@
     "#/*": "./src/*"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@vben-core/design": "workspace:*",
+    "@vben-core/layout-ui": "workspace:*",
     "@vben/access": "workspace:*",
     "@vben/common-ui": "workspace:*",
     "@vben/constants": "workspace:*",
@@ -45,5 +48,8 @@
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11"
   }
 }

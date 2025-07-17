@@ -29,7 +29,9 @@
       "types": "./src/index.ts",
       "development": "./src/index.ts",
       "default": "./dist/design.css"
-    }
+    },
+    "./styles.css": "./src/css/index.css",
+    "./tailwind.css": "./src/css/tailwind.css"
   },
   "publishConfig": {
     "exports": {
@@ -37,5 +39,12 @@
         "default": "./dist/index.mjs"
       }
     }
+  },
+  "dependencies": {
+    "@iconify/tailwind": "catalog:",
+    "@manypkg/get-packages": "catalog:",
+    "@tailwindcss/typography": "catalog:",
+    "tailwindcss": "catalog:",
+    "tailwindcss-animate": "catalog:"
   }
 }

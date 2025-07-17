@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Input, Select } from 'ant-design-vue';
 
-const emit = defineEmits(['blur', 'change']);
+const emit = defineEmits(['blur-sm', 'change']);
 
 const modelValue = defineModel<[string, string]>({
   default: () => [undefined, undefined],

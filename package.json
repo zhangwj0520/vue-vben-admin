@@ -85,7 +85,7 @@
     "lefthook": "catalog:",
     "playwright": "catalog:",
     "rimraf": "catalog:",
-    "tailwindcss": "catalog:",
+    "tailwindcss": "^4.1.11",
     "turbo": "catalog:",
     "typescript": "catalog:",
     "unbuild": "catalog:",

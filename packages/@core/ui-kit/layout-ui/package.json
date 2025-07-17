@@ -15,7 +15,8 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "sideEffects": [
     "**/*.css"
@@ -23,6 +24,7 @@
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "exports": {
+    "./styles.css": "./src/styles.css",
     ".": {
       "types": "./src/index.ts",
       "development": "./src/index.ts",

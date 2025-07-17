@@ -296,7 +296,7 @@ defineExpose({ toggleOpenState, open, close });
                 as-child
               >
                 <Button
-                  :variant="item.value === currentPage ? 'default' : 'outline'"
+                  :variant="item.value === currentPage ? 'default' : 'outline-solid'"
                   class="size-5 p-0 text-sm"
                 >
                   {{ item.value }}

@@ -14,6 +14,7 @@
     "**/*.css"
   ],
   "exports": {
+    "./styles.css": "./src/styles.css",
     ".": {
       "types": "./src/index.ts",
       "default": "./src/index.ts"
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "@vben-core/composables": "workspace:*",
+    "@vben-core/design": "workspace:*",
     "@vben-core/form-ui": "workspace:*",
     "@vben-core/layout-ui": "workspace:*",
     "@vben-core/menu-ui": "workspace:*",

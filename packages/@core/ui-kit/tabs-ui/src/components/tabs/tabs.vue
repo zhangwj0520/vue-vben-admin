@@ -30,7 +30,7 @@ const active = defineModel<string>('active');
 const typeWithClass = computed(() => {
   const typeClasses: Record<string, { content: string }> = {
     brisk: {
-      content: `h-full after:content-['']  after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-primary after:scale-x-0 after:transition-[transform] after:ease-out after:duration-300 hover:after:scale-x-100 after:origin-left [&.is-active]:after:scale-x-100 [&:not(:first-child)]:border-l last:border-r last:border-r border-border`,
+      content: `h-full after:content-['']  after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-primary after:scale-x-0 after:transition-[transform] after:ease-out after:duration-300 hover:after:scale-x-100 after:origin-left [&.is-active]:after:scale-x-100 not-first:border-l last:border-r last:border-r border-border`,
     },
     card: {
       content:
@@ -38,7 +38,7 @@ const typeWithClass = computed(() => {
     },
     plain: {
       content:
-        'h-full [&:not(:first-child)]:border-l last:border-r border-border',
+        'h-full not-first:border-l last:border-r border-border',
     },
   };
 
@@ -81,7 +81,7 @@ function onMouseDown(e: MouseEvent, tab: TabConfig) {
 <template>
   <div
     :class="contentClass"
-    class="relative !flex h-full w-max items-center overflow-hidden pr-6"
+    class="relative flex! h-full w-max items-center overflow-hidden pr-6"
   >
     <TransitionGroup name="slide-left">
       <div
@@ -110,7 +110,7 @@ function onMouseDown(e: MouseEvent, tab: TabConfig) {
           <div class="relative flex size-full items-center">
             <!-- extra -->
             <div
-              class="absolute right-1.5 top-1/2 z-[3] translate-y-[-50%] overflow-hidden"
+              class="absolute right-1.5 top-1/2 z-3 translate-y-[-50%] overflow-hidden"
             >
               <!-- close-icon -->
               <X
@@ -120,7 +120,7 @@ function onMouseDown(e: MouseEvent, tab: TabConfig) {
               />
               <Pin
                 v-show="tab.affixTab && tabsView.length > 1 && tab.closable"
-                class="hover:bg-accent hover:stroke-accent-foreground group-[.is-active]:text-primary dark:group-[.is-active]:text-accent-foreground mt-[1px] size-3.5 cursor-pointer rounded-full transition-all"
+                class="hover:bg-accent hover:stroke-accent-foreground group-[.is-active]:text-primary dark:group-[.is-active]:text-accent-foreground mt-px size-3.5 cursor-pointer rounded-full transition-all"
                 @click.stop="() => emit('unpin', tab)"
               />
             </div>

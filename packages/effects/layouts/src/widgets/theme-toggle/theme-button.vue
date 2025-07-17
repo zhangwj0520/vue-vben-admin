@@ -122,6 +122,8 @@ function toggleTheme(event: MouseEvent) {
 </template>
 
 <style scoped>
+@reference '@vben-core/design/tailwind.css';
+
 .theme-toggle {
   &__moon {
     & > circle {

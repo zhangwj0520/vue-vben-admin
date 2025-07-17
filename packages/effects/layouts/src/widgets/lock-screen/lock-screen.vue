@@ -81,11 +81,11 @@ useScrollLock();
 </script>
 
 <template>
-  <div class="bg-background fixed z-[2000] size-full">
+  <div class="bg-background fixed z-2000 size-full">
     <transition name="slide-left">
       <div v-show="!showUnlockForm" class="size-full">
         <div
-          class="flex-col-center text-foreground/80 hover:text-foreground group fixed left-1/2 top-6 z-[2001] -translate-x-1/2 cursor-pointer text-xl font-semibold"
+          class="flex-col-center text-foreground/80 hover:text-foreground group fixed left-1/2 top-6 z-2001 -translate-x-1/2 cursor-pointer text-xl font-semibold"
           @click="toggleUnlockForm"
         >
           <LockKeyhole

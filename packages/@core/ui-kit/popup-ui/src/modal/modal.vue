@@ -227,14 +227,14 @@ function handleClosed() {
       :class="
         cn(
           'left-0 right-0 top-[10vh] mx-auto flex max-h-[80%] w-[520px] flex-col p-0',
-          shouldFullscreen ? 'sm:rounded-none' : 'sm:rounded-[var(--radius)]',
+          shouldFullscreen ? 'sm:rounded-none' : 'sm:rounded-(--radius)',
           modalClass,
           {
             'border-border border': bordered,
             'shadow-3xl': !bordered,
-            'left-0 top-0 size-full max-h-full !translate-x-0 !translate-y-0':
+            'left-0 top-0 size-full max-h-full translate-x-0! translate-y-0!':
               shouldFullscreen,
-            'top-1/2 !-translate-y-1/2': centered && !shouldFullscreen,
+            'top-1/2 -translate-y-1/2!': centered && !shouldFullscreen,
             'duration-300': !dragging,
             hidden: isClosed,
           },
@@ -305,7 +305,7 @@ function handleClosed() {
       <VbenLoading v-if="showLoading || submitting" spinning />
       <VbenIconButton
         v-if="fullscreenButton"
-        class="hover:bg-accent hover:text-accent-foreground text-foreground/80 flex-center absolute right-10 top-3 hidden size-6 rounded-full px-1 text-lg opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none sm:block"
+        class="hover:bg-accent hover:text-accent-foreground text-foreground/80 flex-center absolute right-10 top-3 hidden size-6 rounded-full px-1 text-lg opacity-70 transition-opacity hover:opacity-100 focus:outline-hidden disabled:pointer-events-none sm:block"
         @click="handleFullscreen"
       >
         <Shrink v-if="fullscreen" class="size-3.5" />

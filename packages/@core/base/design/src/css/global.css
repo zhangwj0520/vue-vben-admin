@@ -1,6 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@reference './tailwind.css';
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+@utility outline-box {
+  @apply outline-border relative cursor-pointer rounded-md p-1 outline-solid outline-1;
+
+  &::after {
+    @apply absolute left-1/2 top-1/2 z-20 h-0 w-px rounded-sm opacity-0 outline-solid outline-2 outline-transparent transition-all duration-300 content-[""];
+  }
+
+  &.outline-box-active {
+    @apply outline-primary outline-solid outline-2;
+  }
+
+  &.outline-box-active::after {
+    display: none;
+  }
+
+  &:not(.outline-box-active):hover::after {
+    @apply outline-primary left-0 top-0 h-full w-full p-1 opacity-100;
+  }
+}
+
+@utility outline-box-active {
+  &.outline-box {
+    @apply outline-primary outline-solid outline-2;
+  }
+
+  &.outline-box::after {
+    display: none;
+  }
+}
+
+@utility vben-link {
+  @apply text-primary hover:text-primary-hover active:text-primary-active cursor-pointer;
+}
+
+@utility card-box {
+  @apply bg-card text-card-foreground border-border rounded-xl border;
+}
 
 @layer base {
   *,
@@ -62,19 +123,19 @@
   }
 
   ::view-transition-old(root) {
-    @apply z-[1];
+    @apply z-1;
   }
 
   ::view-transition-new(root) {
-    @apply z-[2147483646];
+    @apply z-2147483646;
   }
 
   html.dark::view-transition-old(root) {
-    @apply z-[2147483646];
+    @apply z-2147483646;
   }
 
   html.dark::view-transition-new(root) {
-    @apply z-[1];
+    @apply z-1;
   }
 
   input::placeholder,
@@ -110,44 +171,6 @@
     ::-webkit-scrollbar-button {
       @apply hidden;
     }
-  }
-}
-
-@layer components {
-  .flex-center {
-    @apply flex items-center justify-center;
-  }
-
-  .flex-col-center {
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .outline-box {
-    @apply outline-border relative cursor-pointer rounded-md p-1 outline outline-1;
-  }
-
-  .outline-box::after {
-    @apply absolute left-1/2 top-1/2 z-20 h-0 w-[1px] rounded-sm opacity-0 outline outline-2 outline-transparent transition-all duration-300 content-[""];
-  }
-
-  .outline-box.outline-box-active {
-    @apply outline-primary outline outline-2;
-  }
-
-  .outline-box.outline-box-active::after {
-    display: none;
-  }
-
-  .outline-box:not(.outline-box-active):hover::after {
-    @apply outline-primary left-0 top-0 h-full w-full p-1 opacity-100;
-  }
-
-  .vben-link {
-    @apply text-primary hover:text-primary-hover active:text-primary-active cursor-pointer;
-  }
-
-  .card-box {
-    @apply bg-card text-card-foreground border-border rounded-xl border;
   }
 }
 

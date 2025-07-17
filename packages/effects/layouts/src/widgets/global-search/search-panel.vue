@@ -223,7 +223,7 @@ onMounted(() => {
 
 <template>
   <VbenScrollbar>
-    <div class="!flex h-full justify-center px-2 sm:max-h-[450px]">
+    <div class="flex! h-full justify-center px-2 sm:max-h-[450px]">
       <!-- 无搜索结果 -->
       <div
         v-if="keyword && searchResults.length === 0"
@@ -270,7 +270,7 @@ onMounted(() => {
         >
           <VbenIcon
             :icon="item.icon"
-            class="mr-2 size-5 flex-shrink-0"
+            class="mr-2 size-5 shrink-0"
             fallback
           />
 

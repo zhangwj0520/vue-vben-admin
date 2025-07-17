@@ -87,7 +87,7 @@ function getNodeClass(node: Recordable<any>) {
   if (node.value?.type === 'button') {
     classes.push('inline-flex');
     if (node.index % 3 >= 1) {
-      classes.push('!pl-0');
+      classes.push('pl-0!');
     }
   }
 

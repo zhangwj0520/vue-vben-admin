@@ -1,4 +1,5 @@
 /* Make clicks pass-through */
+@reference './tailwind.css';
 #nprogress {
   @apply pointer-events-none;
 }

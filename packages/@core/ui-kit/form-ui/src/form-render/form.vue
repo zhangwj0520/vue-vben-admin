@@ -146,7 +146,7 @@ const computedSchema = computed(
           ...schema.formFieldProps,
         },
         formItemClass: cn(
-          'flex-shrink-0',
+          'shrink-0',
           { hidden },
           formItemClass,
           resolvedSchemaFormItemClass,

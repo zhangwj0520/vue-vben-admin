@@ -48,7 +48,7 @@ defineExpose({
   <div
     ref="actionRef"
     :class="{
-      'transition-width !left-0 duration-300': toLeft,
+      'transition-width left-0! duration-300': toLeft,
       'rounded-md': isDragging,
     }"
     :style="style"

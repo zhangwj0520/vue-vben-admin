@@ -60,7 +60,7 @@ const rootStyle = computed(() => {
   <div
     :class="props.class"
     :style="rootStyle"
-    class="relative flex flex-shrink-0 items-center"
+    class="relative flex shrink-0 items-center"
   >
     <Avatar :class="props.class" class="size-full">
       <AvatarImage :alt="alt" :src="src" :style="imageStyle" />
