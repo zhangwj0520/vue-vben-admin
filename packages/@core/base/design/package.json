@@ -26,11 +26,9 @@
       "default": "./dist/bem.scss"
     },
     ".": {
-      "types": "./src/index.ts",
-      "development": "./src/index.ts",
-      "default": "./dist/design.css"
+      "default": "./src/index.css"
     },
-    "./styles.css": "./src/css/index.css",
+    "./styles.css": "./src/index.css",
     "./tailwind.css": "./src/css/tailwind.css"
   },
   "publishConfig": {

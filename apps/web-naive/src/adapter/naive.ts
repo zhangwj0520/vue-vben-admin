@@ -1,7 +1,6 @@
 import { computed } from 'vue';
 
 import { preferences } from '@vben/preferences';
-import '@vben/styles';
 
 import { createDiscreteApi, darkTheme, lightTheme } from 'naive-ui';
 
