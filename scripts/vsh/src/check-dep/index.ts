@@ -14,7 +14,7 @@ const DEFAULT_CONFIG = {
     '@vben/tsconfig',
     '@vben/vite-config',
     '@types/*',
-    '@vben-core/design',
+    '@vben-core/style',
   ],
   // 需要忽略的包
   ignorePackages: [

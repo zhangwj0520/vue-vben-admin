@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
-    "@vben-core/design": "workspace:*",
     "@vben-core/layout-ui": "workspace:*",
+    "@vben-core/style": "workspace:*",
     "@vben/access": "workspace:*",
     "@vben/common-ui": "workspace:*",
     "@vben/constants": "workspace:*",

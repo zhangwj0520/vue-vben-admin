@@ -49,8 +49,8 @@
       "path": "internal/vite-config",
     },
     {
-      "name": "@vben-core/design",
-      "path": "packages/@core/base/design",
+      "name": "@vben-core/style",
+      "path": "packages/@core/base/style",
     },
     {
       "name": "@vben-core/icons",
