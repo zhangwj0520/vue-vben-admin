@@ -10,34 +10,19 @@
   },
   "license": "MIT",
   "type": "module",
-  "scripts": {
-    "build": "pnpm vite build",
-    "prepublishOnly": "npm run build"
-  },
   "files": [
-    "dist",
     "src"
   ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "exports": {
-    "./bem": {
-      "development": "./src/scss-bem/bem.scss",
-      "default": "./dist/bem.scss"
-    },
     ".": {
       "default": "./src/index.css"
     },
     "./styles.css": "./src/index.css",
     "./tailwind.css": "./src/css/tailwind.css"
   },
-  "publishConfig": {
-    "exports": {
-      ".": {
-        "default": "./dist/index.mjs"
-      }
-    }
-  },
+  "publishConfig": {},
   "dependencies": {
     "@iconify/tailwind": "catalog:",
     "@manypkg/get-packages": "catalog:",
