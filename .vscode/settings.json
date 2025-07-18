@@ -63,8 +63,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // extensions
-  "extensions.ignoreRecommendations": true,
 
   // terminal
   "terminal.integrated.cursorBlinking": true,
@@ -148,10 +146,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "npm.packageManager": "pnpm",
 
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-
   // extension
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
@@ -162,7 +156,6 @@
   "stylelint.enable": true,
   "stylelint.packageManager": "pnpm",
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
-  "stylelint.customSyntax": "postcss-html",
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue"],
 
   "typescript.inlayHints.enumMemberValues.enabled": true,
@@ -189,7 +182,7 @@
     "yaml": false
   },
 
-  "cssVariables.lookupFiles": ["packages/core/base/design/src/**/*.css"],
+  "cssVariables.lookupFiles": ["packages/@core/base/style/**/*.css"],
 
   "i18n-ally.localesPaths": [
     "packages/locales/src/langs",
@@ -200,7 +193,7 @@
   "i18n-ally.enabledParsers": ["json"],
   "i18n-ally.sourceLanguage": "en",
   "i18n-ally.displayLanguage": "zh-CN",
-  "i18n-ally.enabledFrameworks": ["vue", "react"],
+  "i18n-ally.enabledFrameworks": ["vue"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sortKeys": true,
   "i18n-ally.namespace": true,
@@ -221,7 +214,6 @@
   "commentTranslate.multiLineMerge": true,
   "vue.server.hybridMode": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "oxc.enable": false,
   "cSpell.words": [
     "archiver",
     "axios",
