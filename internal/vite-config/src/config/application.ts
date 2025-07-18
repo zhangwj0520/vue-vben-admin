@@ -48,8 +48,6 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
       ...application,
     });
 
-    const { injectGlobalScss = true } = application;
-
     const applicationConfig: UserConfig = {
       base,
       build: {
@@ -60,7 +58,7 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
             entryFileNames: 'jse/index-[name]-[hash].js',
           },
         },
-        target: 'es2015',
+        target: 'esnext',
       },
       esbuild: {
         drop: isBuild
