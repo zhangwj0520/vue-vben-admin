@@ -1,7 +1,6 @@
 /* eslint-disable n/prefer-global/process */
 import path from 'node:path';
 
-import { addDynamicIconSelectors } from '@iconify/tailwind';
 import { getPackagesSync } from '@manypkg/get-packages';
 import typographyPlugin from '@tailwindcss/typography';
 import animate from 'tailwindcss-animate';
@@ -125,7 +124,12 @@ export default {
   plugins: [
     animate,
     typographyPlugin,
-    addDynamicIconSelectors(),
+    // addDynamicIconSelectors({
+    //   iconSets: {
+    //     custom: { path: 'src/assets/svg-icons' },
+    //     // editor: { path: 'src/assets/svg-icons/editor' },
+    //   },
+    // }),
     // enterAnimationPlugin,
   ],
   prefix: '',

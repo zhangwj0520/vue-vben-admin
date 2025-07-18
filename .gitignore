@@ -49,3 +49,6 @@ vite.config.ts.*
 *.sln
 *.sw?
 .history
+
+apps/web-naive/src/typings/auto-imports.d.ts
+apps/web-naive/src/typings/components.d.ts

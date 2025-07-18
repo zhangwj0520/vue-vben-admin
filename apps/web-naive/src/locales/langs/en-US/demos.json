@@ -1,14 +1,15 @@
 {
-  "title": "Demos",
+  "form": "Form",
+  "icons": "icons",
   "naive": "Naive UI",
   "table": "Table",
-  "form": "Form",
+  "title": "Demos",
   "vben": {
-    "title": "Project",
     "about": "About",
-    "document": "Document",
     "antdv": "Ant Design Vue Version",
+    "document": "Document",
+    "element-plus": "Element Plus Version",
     "naive-ui": "Naive UI Version",
-    "element-plus": "Element Plus Version"
+    "title": "Project"
   }
 }

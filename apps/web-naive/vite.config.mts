@@ -1,12 +1,9 @@
 import { defineConfig } from '@vben/vite-config';
 
-import tailwindcss from '@tailwindcss/vite';
-
 export default defineConfig(async () => {
   return {
     application: {},
     vite: {
-      plugins: [tailwindcss()],
       server: {
         proxy: {
           '/api': {

@@ -49,6 +49,6 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "catalog:"
+    "@iconify/tailwind": "catalog:"
   }
 }

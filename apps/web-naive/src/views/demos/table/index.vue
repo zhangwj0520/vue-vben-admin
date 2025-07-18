@@ -3,8 +3,6 @@ import { ref } from 'vue';
 
 import { Page } from '@vben/common-ui';
 
-import { NDataTable } from 'naive-ui';
-
 const columns = ref([
   {
     key: 'no',

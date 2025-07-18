@@ -25,6 +25,7 @@
   "publishConfig": {},
   "dependencies": {
     "@iconify/json": "catalog:",
+    "@iconify/tailwind": "catalog:",
     "@iconify/tailwind4": "catalog:",
     "@manypkg/get-packages": "catalog:",
     "@tailwindcss/typography": "catalog:",

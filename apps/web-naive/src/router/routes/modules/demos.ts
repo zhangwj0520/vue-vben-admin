@@ -37,6 +37,14 @@ const routes: RouteRecordRaw[] = [
         path: '/demos/form',
         component: () => import('#/views/demos/form/basic.vue'),
       },
+      {
+        meta: {
+          title: $t('demos.icons'),
+        },
+        name: 'Icons',
+        path: '/demos/icon',
+        component: () => import('#/views/demos/icons/index.vue'),
+      },
     ],
   },
 ];

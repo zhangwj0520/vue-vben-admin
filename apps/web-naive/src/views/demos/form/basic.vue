@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { Page, useVbenModal } from '@vben/common-ui';
 
-import { NButton, NCard, useMessage } from 'naive-ui';
-
 import { useVbenForm } from '#/adapter/form';
 import { getAllMenusApi } from '#/api';
 
