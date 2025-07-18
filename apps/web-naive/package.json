@@ -26,7 +26,7 @@
     "#/*": "./src/*"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/postcss": "catalog:",
     "@vben-core/layout-ui": "workspace:*",
     "@vben-core/style": "workspace:*",
     "@vben/access": "workspace:*",
@@ -49,6 +49,6 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.11"
+    "@tailwindcss/vite": "catalog:"
   }
 }

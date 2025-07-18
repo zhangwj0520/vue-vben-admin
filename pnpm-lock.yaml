@@ -30,9 +30,12 @@ catalogs:
     '@faker-js/faker':
       specifier: ^9.9.0
       version: 9.9.0
-    '@iconify/tailwind':
-      specifier: ^1.2.0
-      version: 1.2.0
+    '@iconify/json':
+      specifier: ^2.2.354
+      version: 2.2.359
+    '@iconify/tailwind4':
+      specifier: ^1.0.6
+      version: 1.0.6
     '@iconify/vue':
       specifier: ^5.0.0
       version: 5.0.0
@@ -60,9 +63,15 @@ catalogs:
     '@stylistic/stylelint-plugin':
       specifier: ^3.1.3
       version: 3.1.3
+    '@tailwindcss/postcss':
+      specifier: ^4.1.11
+      version: 4.1.11
     '@tailwindcss/typography':
       specifier: ^0.5.16
       version: 0.5.16
+    '@tailwindcss/vite':
+      specifier: ^4.1.11
+      version: 4.1.11
     '@tanstack/vue-query':
       specifier: ^5.81.5
       version: 5.81.5
@@ -339,15 +348,12 @@ catalogs:
     postcss-html:
       specifier: ^1.8.0
       version: 1.8.0
-    postcss-scss:
-      specifier: ^4.0.9
-      version: 4.0.9
     prettier:
       specifier: ^3.6.2
       version: 3.6.2
     prettier-plugin-tailwindcss:
-      specifier: ^0.6.13
-      version: 0.6.13
+      specifier: ^0.6.14
+      version: 0.6.14
     publint:
       specifier: ^0.3.12
       version: 0.3.12
@@ -390,9 +396,6 @@ catalogs:
     stylelint-config-recommended:
       specifier: ^16.0.0
       version: 16.0.0
-    stylelint-config-recommended-scss:
-      specifier: ^14.1.0
-      version: 14.1.0
     stylelint-config-recommended-vue:
       specifier: ^1.6.1
       version: 1.6.1
@@ -405,9 +408,6 @@ catalogs:
     stylelint-prettier:
       specifier: ^5.0.3
       version: 5.0.3
-    stylelint-scss:
-      specifier: ^6.12.1
-      version: 6.12.1
     tailwind-merge:
       specifier: ^2.6.0
       version: 2.6.0
@@ -584,7 +584,7 @@ importers:
         specifier: 'catalog:'
         version: 6.0.1
       tailwindcss:
-        specifier: ^4.1.11
+        specifier: 'catalog:'
         version: 4.1.11
       turbo:
         specifier: 'catalog:'
@@ -754,14 +754,14 @@ importers:
   apps/web-naive:
     dependencies:
       '@tailwindcss/postcss':
-        specifier: ^4.1.11
+        specifier: 'catalog:'
         version: 4.1.11
-      '@vben-core/design':
-        specifier: workspace:*
-        version: link:../../packages/@core/base/design
       '@vben-core/layout-ui':
         specifier: workspace:*
         version: link:../../packages/@core/ui-kit/layout-ui
+      '@vben-core/style':
+        specifier: workspace:*
+        version: link:../../packages/@core/base/style
       '@vben/access':
         specifier: workspace:*
         version: link:../../packages/effects/access
@@ -818,7 +818,7 @@ importers:
         version: 4.5.1(vue@3.5.17(typescript@5.8.3))
     devDependencies:
       '@tailwindcss/vite':
-        specifier: ^4.1.11
+        specifier: 'catalog:'
         version: 4.1.11(vite@6.3.5(@types/node@22.16.0)(jiti@2.4.2)(less@4.3.0)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.0))
 
   docs:
@@ -968,7 +968,7 @@ importers:
         version: 3.6.2
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
-        version: 0.6.13(prettier@3.6.2)
+        version: 0.6.14(prettier@3.6.2)
 
   internal/lint-configs/stylelint-config:
     dependencies:
@@ -978,9 +978,6 @@ importers:
       stylelint-config-recess-order:
         specifier: 'catalog:'
         version: 6.1.0(stylelint@16.21.0(typescript@5.8.3))
-      stylelint-scss:
-        specifier: 'catalog:'
-        version: 6.12.1(stylelint@16.21.0(typescript@5.8.3))
     devDependencies:
       postcss:
         specifier: 'catalog:'
@@ -988,9 +985,6 @@ importers:
       postcss-html:
         specifier: 'catalog:'
         version: 1.8.0
-      postcss-scss:
-        specifier: 'catalog:'
-        version: 4.0.9(postcss@8.5.6)
       prettier:
         specifier: 'catalog:'
         version: 3.6.2
@@ -1000,9 +994,6 @@ importers:
       stylelint-config-recommended:
         specifier: 'catalog:'
         version: 16.0.0(stylelint@16.21.0(typescript@5.8.3))
-      stylelint-config-recommended-scss:
-        specifier: 'catalog:'
-        version: 14.1.0(postcss@8.5.6)(stylelint@16.21.0(typescript@5.8.3))
       stylelint-config-recommended-vue:
         specifier: 'catalog:'
         version: 1.6.1(postcss-html@1.8.0)(stylelint@16.21.0(typescript@5.8.3))
@@ -1143,24 +1134,6 @@ importers:
         specifier: 'catalog:'
         version: 1.0.7
 
-  packages/@core/base/design:
-    dependencies:
-      '@iconify/tailwind':
-        specifier: 'catalog:'
-        version: 1.2.0
-      '@manypkg/get-packages':
-        specifier: 'catalog:'
-        version: 3.0.0
-      '@tailwindcss/typography':
-        specifier: 'catalog:'
-        version: 0.5.16(tailwindcss@4.1.11)
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 4.1.11
-      tailwindcss-animate:
-        specifier: 'catalog:'
-        version: 1.0.7(tailwindcss@4.1.11)
-
   packages/@core/base/icons:
     dependencies:
       '@iconify/vue':
@@ -1230,6 +1203,27 @@ importers:
       '@types/nprogress':
         specifier: 'catalog:'
         version: 0.2.3
+
+  packages/@core/base/style:
+    dependencies:
+      '@iconify/json':
+        specifier: 'catalog:'
+        version: 2.2.359
+      '@iconify/tailwind4':
+        specifier: 'catalog:'
+        version: 1.0.6(tailwindcss@4.1.11)
+      '@manypkg/get-packages':
+        specifier: 'catalog:'
+        version: 3.0.0
+      '@tailwindcss/typography':
+        specifier: 'catalog:'
+        version: 0.5.16(tailwindcss@4.1.11)
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.11
+      tailwindcss-animate:
+        specifier: 'catalog:'
+        version: 1.0.7(tailwindcss@4.1.11)
 
   packages/@core/base/typings:
     dependencies:
@@ -1390,15 +1384,15 @@ importers:
       '@vben-core/composables':
         specifier: workspace:*
         version: link:../../composables
-      '@vben-core/design':
-        specifier: workspace:*
-        version: link:../../base/design
       '@vben-core/icons':
         specifier: workspace:*
         version: link:../../base/icons
       '@vben-core/shared':
         specifier: workspace:*
         version: link:../../base/shared
+      '@vben-core/style':
+        specifier: workspace:*
+        version: link:../../base/style
       '@vben-core/typings':
         specifier: workspace:*
         version: link:../../base/typings
@@ -1426,15 +1420,15 @@ importers:
       '@vben-core/composables':
         specifier: workspace:*
         version: link:../../composables
-      '@vben-core/design':
-        specifier: workspace:*
-        version: link:../../base/design
       '@vben-core/icons':
         specifier: workspace:*
         version: link:../../base/icons
       '@vben-core/shadcn-ui':
         specifier: workspace:*
         version: link:../shadcn-ui
+      '@vben-core/style':
+        specifier: workspace:*
+        version: link:../../base/style
       '@vben-core/typings':
         specifier: workspace:*
         version: link:../../base/typings
@@ -1568,9 +1562,6 @@ importers:
       '@vben-core/composables':
         specifier: workspace:*
         version: link:../../@core/composables
-      '@vben-core/design':
-        specifier: workspace:*
-        version: link:../../@core/base/design
       '@vben-core/form-ui':
         specifier: workspace:*
         version: link:../../@core/ui-kit/form-ui
@@ -1589,6 +1580,9 @@ importers:
       '@vben-core/shared':
         specifier: workspace:*
         version: link:../../@core/base/shared
+      '@vben-core/style':
+        specifier: workspace:*
+        version: link:../../@core/base/style
       '@vben-core/tabs-ui':
         specifier: workspace:*
         version: link:../../@core/ui-kit/tabs-ui
@@ -1628,9 +1622,6 @@ importers:
 
   packages/effects/plugins:
     dependencies:
-      '@vben-core/design':
-        specifier: workspace:*
-        version: link:../../@core/base/design
       '@vben-core/form-ui':
         specifier: workspace:*
         version: link:../../@core/ui-kit/form-ui
@@ -1640,6 +1631,9 @@ importers:
       '@vben-core/shared':
         specifier: workspace:*
         version: link:../../@core/base/shared
+      '@vben-core/style':
+        specifier: workspace:*
+        version: link:../../@core/base/style
       '@vben/hooks':
         specifier: workspace:*
         version: link:../hooks
@@ -3445,8 +3439,13 @@ packages:
   '@iconify-json/vscode-icons@1.2.23':
     resolution: {integrity: sha512-gFTcKecKra2/b5SbGDgHGI/l8CuikHyBPmqGlK+YCmS8AK72dtDQbUekdoACsju/3TYS37QvdPoOQwnyx2LdYg==}
 
-  '@iconify/tailwind@1.2.0':
-    resolution: {integrity: sha512-KgpIHWOTcRYw1XcoUqyNSrmYyfLLqZYu3AmP8zdfLk0F5TqRO8YerhlvlQmGfn7rJXgPeZN569xPAJnJ53zZxA==}
+  '@iconify/json@2.2.359':
+    resolution: {integrity: sha512-nOIaROD3xeLiFGvJu0YIgeu4Hqbmz6T71b0lsFv1TY6Uu6Lk/5Z8GhDByIE2/zfgxvxfv3f+5A/DkLHmMXYu8Q==}
+
+  '@iconify/tailwind4@1.0.6':
+    resolution: {integrity: sha512-43ZXe+bC7CuE2LCgROdqbQeFYJi/J7L/k1UpSy8KDQlWVsWxPzLSWbWhlJx4uRYLOh1NRyw02YlDOgzBOFNd+A==}
+    peerDependencies:
+      tailwindcss: '>= 4'
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -7831,9 +7830,6 @@ packages:
   knitwork@1.2.0:
     resolution: {integrity: sha512-xYSH7AvuQ6nXkq42x0v5S8/Iry+cfulBz/DJQzhIyESdLD7425jXsPy4vn5cCXU+HhRN2kVw51Vd1K6/By4BQg==}
 
-  known-css-properties@0.36.0:
-    resolution: {integrity: sha512-A+9jP+IUmuQsNdsLdcg6Yt7voiMF/D4K83ew0OpJtpu+l34ef7LaohWV0Rc6KNvzw6ZDizkqfyB5JznZnzuKQA==}
-
   known-css-properties@0.37.0:
     resolution: {integrity: sha512-JCDrsP4Z1Sb9JwG0aJ8Eo2r7k4Ou5MwmThS/6lcIe1ICyb7UBJKGRIUUdqc2ASdE/42lgz6zFUnzAIhtXnBVrQ==}
 
@@ -8213,9 +8209,6 @@ packages:
 
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
-
-  mdn-data@2.21.0:
-    resolution: {integrity: sha512-+ZKPQezM5vYJIkCxaC+4DTnRrVZR1CgsKLu5zsQERQx6Tea8Y+wMx5A24rq8A8NepCeatIQufVAekKNgiBMsGQ==}
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
@@ -8974,9 +8967,6 @@ packages:
     resolution: {integrity: sha512-5mMeb1TgLWoRKxZ0Xh9RZDfwUUIqRrcxO2uXO+Ezl1N5lqpCiSU5Gk6+1kZediBfBHFtPCdopr2UZ2SgUsKcgQ==}
     engines: {node: ^12 || >=14}
 
-  postcss-media-query-parser@0.2.3:
-    resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
-
   postcss-merge-longhand@7.0.5:
     resolution: {integrity: sha512-Kpu5v4Ys6QI59FxmxtNB/iHUVDn9Y9sYw66D6+SZoIk4QTz1prC4aYkhIESu+ieG1iylod1f8MILMs1Em3mmIw==}
     engines: {node: ^18.12.0 || ^20.9.0 || >=22.0}
@@ -9106,12 +9096,6 @@ packages:
     peerDependencies:
       postcss: ^8.4.31
 
-  postcss-scss@4.0.9:
-    resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
-    engines: {node: '>=12.0'}
-    peerDependencies:
-      postcss: ^8.4.29
-
   postcss-selector-parser@6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
     engines: {node: '>=4'}
@@ -9179,11 +9163,13 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier-plugin-tailwindcss@0.6.13:
-    resolution: {integrity: sha512-uQ0asli1+ic8xrrSmIOaElDu0FacR4x69GynTh2oZjFY10JUt6EEumTQl5tB4fMeD6I1naKd+4rXQQ7esT2i1g==}
+  prettier-plugin-tailwindcss@0.6.14:
+    resolution: {integrity: sha512-pi2e/+ZygeIqntN+vC573BcW5Cve8zUB0SSAGxqpB4f96boZF4M3phPVoOFCeypwkpRYdi7+jQ5YJJUwrkGUAg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-hermes': '*'
+      '@prettier/plugin-oxc': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
@@ -9202,6 +9188,10 @@ packages:
       prettier-plugin-svelte: '*'
     peerDependenciesMeta:
       '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-hermes':
+        optional: true
+      '@prettier/plugin-oxc':
         optional: true
       '@prettier/plugin-pug':
         optional: true
@@ -10017,28 +10007,12 @@ packages:
     peerDependencies:
       stylelint: '>=16'
 
-  stylelint-config-recommended-scss@14.1.0:
-    resolution: {integrity: sha512-bhaMhh1u5dQqSsf6ri2GVWWQW5iUjBYgcHkh7SgDDn92ijoItC/cfO/W+fpXshgTQWhwFkP1rVcewcv4jaftRg==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      postcss: ^8.3.3
-      stylelint: ^16.6.1
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-
   stylelint-config-recommended-vue@1.6.1:
     resolution: {integrity: sha512-lLW7hTIMBiTfjenGuDq2kyHA6fBWd/+Df7MO4/AWOxiFeXP9clbpKgg27kHfwA3H7UNMGC7aeP3mNlZB5LMmEQ==}
     engines: {node: ^12 || >=14}
     peerDependencies:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
-
-  stylelint-config-recommended@14.0.1:
-    resolution: {integrity: sha512-bLvc1WOz/14aPImu/cufKAZYfXs/A/owZfSMZ4N+16WGXLoX5lOir53M6odBxvhgmgdxCVnNySJmZKx73T93cg==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.1.0
 
   stylelint-config-recommended@16.0.0:
     resolution: {integrity: sha512-4RSmPjQegF34wNcK1e1O3Uz91HN8P1aFdFzio90wNK9mjgAI19u5vsU868cVZboKzCaa5XbpvtTzAAGQAxpcXA==}
@@ -10069,12 +10043,6 @@ packages:
     peerDependencies:
       prettier: '>=3.0.0'
       stylelint: '>=16.0.0'
-
-  stylelint-scss@6.12.1:
-    resolution: {integrity: sha512-UJUfBFIvXfly8WKIgmqfmkGKPilKB4L5j38JfsDd+OCg2GBdU0vGUV08Uw82tsRZzd4TbsUURVVNGeOhJVF7pA==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.0.2
 
   stylelint@16.21.0:
     resolution: {integrity: sha512-ki3PpJGG7xhm3WtINoWGnlvqAmbqSexoRMbEMJzlwewSIOqPRKPlq452c22xAdEJISVi80r+I7KL9GPUiwFgbg==}
@@ -12203,7 +12171,7 @@ snapshots:
       '@babel/parser': 7.27.0
       '@babel/template': 7.27.0
       '@babel/types': 7.27.0
-      debug: 4.4.0
+      debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -13029,9 +12997,18 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/tailwind@1.2.0':
+  '@iconify/json@2.2.359':
     dependencies:
       '@iconify/types': 2.0.0
+      pathe: 1.1.2
+
+  '@iconify/tailwind4@1.0.6(tailwindcss@4.1.11)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      '@iconify/utils': 2.3.0
+      tailwindcss: 4.1.11
+    transitivePeerDependencies:
+      - supports-color
 
   '@iconify/types@2.0.0': {}
 
@@ -13040,7 +13017,7 @@ snapshots:
       '@antfu/install-pkg': 1.0.0
       '@antfu/utils': 8.1.1
       '@iconify/types': 2.0.0
-      debug: 4.4.0
+      debug: 4.4.1
       globals: 15.15.0
       kolorist: 1.8.0
       local-pkg: 1.1.1
@@ -14218,7 +14195,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.35.1(typescript@5.8.3)
       '@typescript-eslint/types': 8.35.1
-      debug: 4.4.0
+      debug: 4.4.1
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
@@ -15313,7 +15290,7 @@ snapshots:
       ohash: 2.0.11
       pathe: 2.0.3
       perfect-debounce: 1.0.0
-      pkg-types: 2.1.0
+      pkg-types: 2.2.0
       rc9: 2.1.2
     optionalDependencies:
       magicast: 0.3.5
@@ -17902,8 +17879,6 @@ snapshots:
 
   knitwork@1.2.0: {}
 
-  known-css-properties@0.36.0: {}
-
   known-css-properties@0.37.0: {}
 
   kolorist@1.8.0: {}
@@ -18076,7 +18051,7 @@ snapshots:
   local-pkg@1.1.1:
     dependencies:
       mlly: 1.7.4
-      pkg-types: 2.1.0
+      pkg-types: 2.2.0
       quansync: 0.2.10
 
   locate-path@5.0.0:
@@ -18278,8 +18253,6 @@ snapshots:
   mdn-data@2.0.30: {}
 
   mdn-data@2.12.2: {}
-
-  mdn-data@2.21.0: {}
 
   mdurl@2.0.0: {}
 
@@ -18718,7 +18691,7 @@ snapshots:
       citty: 0.1.6
       consola: 3.4.2
       pathe: 2.0.3
-      pkg-types: 2.1.0
+      pkg-types: 2.2.0
       tinyexec: 0.3.2
 
   object-inspect@1.13.4: {}
@@ -19088,8 +19061,6 @@ snapshots:
       postcss: 8.5.6
       postcss-safe-parser: 6.0.0(postcss@8.5.6)
 
-  postcss-media-query-parser@0.2.3: {}
-
   postcss-merge-longhand@7.0.5(postcss@8.5.6):
     dependencies:
       postcss: 8.5.6
@@ -19206,10 +19177,6 @@ snapshots:
     dependencies:
       postcss: 8.5.6
 
-  postcss-scss@4.0.9(postcss@8.5.6):
-    dependencies:
-      postcss: 8.5.6
-
   postcss-selector-parser@6.0.10:
     dependencies:
       cssesc: 3.0.0
@@ -19293,7 +19260,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.6.13(prettier@3.6.2):
+  prettier-plugin-tailwindcss@0.6.14(prettier@3.6.2):
     dependencies:
       prettier: 3.6.2
 
@@ -20160,15 +20127,6 @@ snapshots:
       stylelint: 16.21.0(typescript@5.8.3)
       stylelint-order: 6.0.4(stylelint@16.21.0(typescript@5.8.3))
 
-  stylelint-config-recommended-scss@14.1.0(postcss@8.5.6)(stylelint@16.21.0(typescript@5.8.3)):
-    dependencies:
-      postcss-scss: 4.0.9(postcss@8.5.6)
-      stylelint: 16.21.0(typescript@5.8.3)
-      stylelint-config-recommended: 14.0.1(stylelint@16.21.0(typescript@5.8.3))
-      stylelint-scss: 6.12.1(stylelint@16.21.0(typescript@5.8.3))
-    optionalDependencies:
-      postcss: 8.5.6
-
   stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.0)(stylelint@16.21.0(typescript@5.8.3)):
     dependencies:
       postcss-html: 1.8.0
@@ -20176,10 +20134,6 @@ snapshots:
       stylelint: 16.21.0(typescript@5.8.3)
       stylelint-config-html: 1.1.0(postcss-html@1.8.0)(stylelint@16.21.0(typescript@5.8.3))
       stylelint-config-recommended: 16.0.0(stylelint@16.21.0(typescript@5.8.3))
-
-  stylelint-config-recommended@14.0.1(stylelint@16.21.0(typescript@5.8.3)):
-    dependencies:
-      stylelint: 16.21.0(typescript@5.8.3)
 
   stylelint-config-recommended@16.0.0(stylelint@16.21.0(typescript@5.8.3)):
     dependencies:
@@ -20206,18 +20160,6 @@ snapshots:
     dependencies:
       prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
-      stylelint: 16.21.0(typescript@5.8.3)
-
-  stylelint-scss@6.12.1(stylelint@16.21.0(typescript@5.8.3)):
-    dependencies:
-      css-tree: 3.1.0
-      is-plain-object: 5.0.0
-      known-css-properties: 0.36.0
-      mdn-data: 2.21.0
-      postcss-media-query-parser: 0.2.3
-      postcss-resolve-nested-selector: 0.1.6
-      postcss-selector-parser: 7.1.0
-      postcss-value-parser: 4.2.0
       stylelint: 16.21.0(typescript@5.8.3)
 
   stylelint@16.21.0(typescript@5.8.3):
@@ -20629,7 +20571,7 @@ snapshots:
       mlly: 1.7.4
       pathe: 2.0.3
       picomatch: 4.0.2
-      pkg-types: 2.1.0
+      pkg-types: 2.2.0
       scule: 1.3.0
       strip-literal: 3.0.0
       tinyglobby: 0.2.14
