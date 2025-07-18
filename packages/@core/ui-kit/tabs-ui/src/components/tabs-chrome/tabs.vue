@@ -171,7 +171,7 @@ function onMouseDown(e: MouseEvent, tab: TabConfig) {
 </template>
 
 <style scoped>
-@reference '@vben-core/design/tailwind.css';
+@reference '@vben-core/style/tailwind.css';
 
 .tabs-chrome {
   &__item:not(.dragging) {

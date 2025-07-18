@@ -1,3 +1,4 @@
+/* eslint-disable n/prefer-global/process */
 import path from 'node:path';
 
 import { addDynamicIconSelectors } from '@iconify/tailwind';
@@ -5,7 +6,7 @@ import { getPackagesSync } from '@manypkg/get-packages';
 import typographyPlugin from '@tailwindcss/typography';
 import animate from 'tailwindcss-animate';
 
-import { enterAnimationPlugin } from './plugins/entry';
+// import { enterAnimationPlugin } from './plugins/entry';
 
 // import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -125,7 +126,7 @@ export default {
     animate,
     typographyPlugin,
     addDynamicIconSelectors(),
-    enterAnimationPlugin,
+    // enterAnimationPlugin,
   ],
   prefix: '',
   theme: {

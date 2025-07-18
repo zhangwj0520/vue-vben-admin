@@ -49,16 +49,16 @@
       "path": "internal/vite-config",
     },
     {
-      "name": "@vben-core/design",
-      "path": "packages/@core/base/design",
-    },
-    {
       "name": "@vben-core/icons",
       "path": "packages/@core/base/icons",
     },
     {
       "name": "@vben-core/shared",
       "path": "packages/@core/base/shared",
+    },
+    {
+      "name": "@vben-core/style",
+      "path": "packages/@core/base/style",
     },
     {
       "name": "@vben-core/typings",
@@ -140,7 +140,6 @@
       "name": "@vben/stores",
       "path": "packages/stores",
     },
-
     {
       "name": "@vben/types",
       "path": "packages/types",

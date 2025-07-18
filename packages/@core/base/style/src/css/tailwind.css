@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+@config '../config/index.js';
+
+@plugin '@iconify/tailwind4' {
+  prefix: 'icon';
+  scale: 1.2;
+}

@@ -7,6 +7,7 @@
   color utility to any element that depends on these defaults.
 */
 @reference './tailwind.css';
+
 @layer base {
   *,
   ::after,
@@ -15,6 +16,18 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+}
+
+@utility content-auto {
+  /* content-visibility: auto; */
+}
+
+@utility -enter-x {
+  @apply transition-transform duration-300 ease-in-out;
+
+  /* animation: `enter-x-animation 0.3s ease-in-out ${delay} forwards`,
+     opacity: '0',
+     transform: `translateX(50px)`, */
 }
 
 @utility flex-center {
@@ -26,14 +39,14 @@
 }
 
 @utility outline-box {
-  @apply outline-border relative cursor-pointer rounded-md p-1 outline-solid outline-1;
+  @apply outline-border relative cursor-pointer rounded-md p-1 outline-1 outline-solid;
 
   &::after {
-    @apply absolute left-1/2 top-1/2 z-20 h-0 w-px rounded-sm opacity-0 outline-solid outline-2 outline-transparent transition-all duration-300 content-[""];
+    @apply absolute top-1/2 left-1/2 z-20 h-0 w-px rounded-sm opacity-0 outline-2 outline-transparent transition-all duration-300 content-[""] outline-solid;
   }
 
   &.outline-box-active {
-    @apply outline-primary outline-solid outline-2;
+    @apply outline-primary outline-2 outline-solid;
   }
 
   &.outline-box-active::after {
@@ -41,13 +54,13 @@
   }
 
   &:not(.outline-box-active):hover::after {
-    @apply outline-primary left-0 top-0 h-full w-full p-1 opacity-100;
+    @apply outline-primary top-0 left-0 h-full w-full p-1 opacity-100;
   }
 }
 
 @utility outline-box-active {
   &.outline-box {
-    @apply outline-primary outline-solid outline-2;
+    @apply outline-primary outline-2 outline-solid;
   }
 
   &.outline-box::after {
