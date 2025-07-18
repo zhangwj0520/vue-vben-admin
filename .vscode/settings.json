@@ -65,7 +65,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // extensions
-  "extensions.ignoreRecommendations": true,
+  "extensions.ignoreRecommendations": false,
 
   // terminal
   "terminal.integrated.cursorBlinking": true,
@@ -113,7 +113,7 @@
     "**/yarn.lock": true
   },
 
-  "typescript.tsserver.exclude": ["**/node_modules", "**/dist", "**/.turbo"],
+  "typescript.tsserver.exclude": ["**/node_modules", "k s**/dist", "**/.turbo"],
 
   // search
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
@@ -163,7 +163,6 @@
   "stylelint.enable": true,
   "stylelint.packageManager": "pnpm",
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
-  "stylelint.customSyntax": "postcss-html",
   "stylelint.snippet": ["css", "less", "postcss", "scss", "vue"],
 
   "typescript.inlayHints.enumMemberValues.enabled": true,
