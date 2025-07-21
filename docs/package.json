@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@vben-core/shadcn-ui": "workspace:*",
+    "@vben-core/style": "workspace:*",
     "@vben/common-ui": "workspace:*",
     "@vben/locales": "workspace:*",
     "@vben/plugins": "workspace:*",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@nolebase/vitepress-plugin-git-changelog": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
     "@vben/vite-config": "workspace:*",
     "@vite-pwa/vitepress": "catalog:",
     "vitepress": "catalog:",
