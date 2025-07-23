@@ -241,8 +241,8 @@ function createColorsPalette(name) {
     500: `hsl(var(--${name}-500))`,
     600: `hsl(var(--${name}-600))`,
     700: `hsl(var(--${name}-700))`,
-    // 800: `hsl(var(--${name}-800))`,
-    // 900: `hsl(var(--${name}-900))`,
+    800: `hsl(var(--${name}-800))`,
+    900: `hsl(var(--${name}-900))`,
     // 950: `hsl(var(--${name}-950))`,
     // 激活状态下的颜色，适用于按钮按下时的背景色或边框色。
     active: `hsl(var(--${name}-700))`,

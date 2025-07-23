@@ -1,0 +1,15 @@
+{
+  "form": "表单",
+  "icons": "图标",
+  "naive": "Naive UI",
+  "table": "表格",
+  "title": "演示",
+  "vben": {
+    "about": "关于",
+    "antdv": "Ant Design Vue 版本",
+    "document": "文档",
+    "element-plus": "Element Plus 版本",
+    "naive-ui": "Naive UI 版本",
+    "title": "项目"
+  }
+}
