@@ -13,7 +13,9 @@ import {
 } from '@vben/request';
 import { useAccessStore } from '@vben/stores';
 
-import { message } from '#/adapter/naive';
+// import { message } from '#/adapter/naive';
+import { MessagePlugin } from 'tdesign-vue-next';
+
 import { useAuthStore } from '#/store';
 
 import { refreshTokenApi } from './core';
@@ -98,7 +100,8 @@ function createRequestClient(baseURL: string, options?: RequestClientOptions) {
       const responseData = error?.response?.data ?? {};
       const errorMessage = responseData?.error ?? responseData?.message ?? '';
       // 如果没有错误信息，则会根据状态码进行提示
-      message.error(errorMessage || msg);
+      // message.error(errorMessage || msg);
+      MessagePlugin.error({ content: errorMessage || msg });
     }),
   );
 

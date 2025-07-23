@@ -43,12 +43,13 @@
     "@vben/types": "workspace:*",
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
-    "naive-ui": "catalog:",
+    "lodash-es": "^4.17.21",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@iconify/tailwind": "catalog:"
+    "@iconify/tailwind": "catalog:",
+    "tdesign-vue-next": "^1.15.1"
   }
 }

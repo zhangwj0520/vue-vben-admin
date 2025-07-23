@@ -8,8 +8,8 @@ import { preferences } from '@vben/preferences';
 import { resetAllStores, useAccessStore, useUserStore } from '@vben/stores';
 
 import { defineStore } from 'pinia';
+import { NotifyPlugin } from 'tdesign-vue-next';
 
-import { notification } from '#/adapter/naive';
 import { getAccessCodesApi, getUserInfoApi, loginApi, logoutApi } from '#/api';
 import { $t } from '#/locales';
 
@@ -62,10 +62,14 @@ export const useAuthStore = defineStore('auth', () => {
         }
 
         if (userInfo?.realName) {
-          notification.success({
-            content: $t('authentication.loginSuccess'),
-            description: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
-            duration: 3000,
+          // notification.success({
+          //   content: $t('authentication.loginSuccess'),
+          //   description: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
+          //   duration: 3000,
+          // });
+          NotifyPlugin.success({
+            title: $t('authentication.loginSuccess'),
+            content: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
           });
         }
       }

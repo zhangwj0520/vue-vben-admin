@@ -1,13 +1,30 @@
+// 从指定目录自动导入组件
+import { isPackageExists } from 'local-pkg';
 // https://github.com/antfu/unplugin-auto-import
 import AutoImport from 'unplugin-auto-import/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import IconsResolver from 'unplugin-icons/resolver';
 // https://github.com/antfu/unplugin-icons/blob/main/examples/vite-vue3/vite.config.ts
 import Icons from 'unplugin-icons/vite'; // iconify图标
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import {
+  NaiveUiResolver,
+  TDesignResolver,
+} from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
-// 从指定目录自动导入组件
+
 export default function unplugin() {
+  const resolvers = [];
+  if (isPackageExists('naive-ui')) {
+    resolvers.push(NaiveUiResolver());
+  }
+  if (isPackageExists('tdesign-vue-next')) {
+    resolvers.push(
+      TDesignResolver({
+        library: 'vue-next',
+      }),
+    );
+  }
+
   return [
     AutoImport({
       imports: [
@@ -34,7 +51,7 @@ export default function unplugin() {
       },
       // custom resolvers
       // 可以在这自定义自己的东西，比如接口api的引入，工具函数等等
-      resolvers: [NaiveUiResolver()],
+      resolvers: [...resolvers],
     }),
     Icons({
       compiler: 'vue3',
@@ -58,7 +75,7 @@ export default function unplugin() {
       types: [{ from: 'vue-router', names: ['RouterLink', 'RouterView'] }],
       // ui库解析器
       resolvers: [
-        NaiveUiResolver(),
+        ...resolvers,
         // 在assets/svg目录下查找svg文件 并自动生成组件 icon-custom-xxx
         IconsResolver({
           customCollections: ['custom'],

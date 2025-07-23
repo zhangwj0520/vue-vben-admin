@@ -16,5 +16,11 @@ declare module 'vue' {
     NSpace: typeof import('naive-ui')['NSpace']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TButton: typeof import('tdesign-vue-next')['Button']
+    TCard: typeof import('tdesign-vue-next')['Card']
+    TCol: typeof import('tdesign-vue-next')['Col']
+    TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
+    TRow: typeof import('tdesign-vue-next')['Row']
+    TSpace: typeof import('tdesign-vue-next')['Space']
   }
 }

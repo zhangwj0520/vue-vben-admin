@@ -186,7 +186,7 @@
 
   "i18n-ally.localesPaths": [
     "packages/locales/src/langs",
-    "apps/*/src/locales/langs"
+    "apps/web-TDesign/src/locales/langs"
   ],
   "i18n-ally.pathMatcher": "{locale}/{namespace}.{ext}",
   "i18n-ally.enabledParsers": ["json"],
