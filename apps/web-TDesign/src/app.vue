@@ -45,6 +45,23 @@ const globalConfig: GlobalConfigProvider = computed(() =>
 //   preferences.theme.mode === 'dark' ? darkTheme : lightTheme,
 // );
 
+watch(
+  () => [preferences.theme.mode],
+  ([theme]) => {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('theme-mode', 'dark');
+    } else {
+      document.documentElement.removeAttribute('theme-mode');
+    }
+
+    // naive.setThemeOverrides(themeOverrides.value);
+    // naive.setDateLocale(tokenDateLocale.value);
+  },
+  {
+    immediate: true,
+  },
+);
+
 // const themeOverrides = computed((): GlobalThemeOverrides => {
 //   return {
 //     common: commonTokens,
@@ -66,7 +83,7 @@ const globalConfig: GlobalConfigProvider = computed(() =>
       </NMessageProvider>
     </NNotificationProvider>
   </NConfigProvider> -->
-  <t-config-provider :global-config="globalConfig">
+  <t-config-provider :global-config="locale">
     <RouterView />
   </t-config-provider>
 </template>

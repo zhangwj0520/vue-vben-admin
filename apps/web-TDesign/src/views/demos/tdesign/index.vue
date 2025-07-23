@@ -36,7 +36,10 @@ function notify(type: NotificationThemeList) {
 </script>
 
 <template>
-  <Page description="支持多语言，主题功能集成切换等" title="naive组件使用演示">
+  <Page
+    description="支持多语言，主题功能集成切换等"
+    title="TDesign 组件使用演示"
+  >
     <t-space direction="vertical">
       <t-card
         title="按钮"
@@ -93,24 +96,9 @@ function notify(type: NotificationThemeList) {
           <t-button theme="primary" @click="notify('info')"> 加载中 </t-button>
         </t-space>
       </t-card>
+      <t-card title="日期选择" :bordered="false" hover-shadow>
+        <t-date-range-picker />
+      </t-card>
     </t-space>
-
-    <!-- <NCard class="mb-5" title="Message">
-      <NSpace>
-        <NButton type="error" @click="error"> 错误 </NButton>
-        <NButton type="warning" @click="warning"> 警告 </NButton>
-        <NButton type="success" @click="success"> 成功 </NButton>
-        <NButton type="primary" @click="loading"> 加载中 </NButton>
-      </NSpace>
-    </NCard>
-
-    <NCard class="mb-5" title="Notification">
-      <NSpace>
-        <NButton type="error" @click="notify('error')"> 错误 </NButton>
-        <NButton type="warning" @click="notify('warning')"> 警告 </NButton>
-        <NButton type="success" @click="notify('success')"> 成功 </NButton>
-        <NButton type="primary" @click="notify('info')"> 加载中 </NButton>
-      </NSpace>
-    </NCard> -->
   </Page>
 </template>

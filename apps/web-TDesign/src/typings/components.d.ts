@@ -20,6 +20,7 @@ declare module 'vue' {
     TCard: typeof import('tdesign-vue-next')['Card']
     TCol: typeof import('tdesign-vue-next')['Col']
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider']
+    TDateRangePicker: typeof import('tdesign-vue-next')['DateRangePicker']
     TRow: typeof import('tdesign-vue-next')['Row']
     TSpace: typeof import('tdesign-vue-next')['Space']
   }
