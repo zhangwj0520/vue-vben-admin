@@ -39,6 +39,7 @@
     "vite-plugin-vue-devtools": "catalog:"
   },
   "devDependencies": {
+    "@iconify/tools": "^4.1.2",
     "@pnpm/workspace.read-manifest": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@types/archiver": "catalog:",

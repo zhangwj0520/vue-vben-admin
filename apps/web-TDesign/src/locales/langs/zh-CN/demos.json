@@ -12,5 +12,7 @@
     "element-plus": "Element Plus 版本",
     "naive-ui": "Naive UI 版本",
     "title": "项目"
-  }
+  },
+  "vue-flow": "vue-flow",
+  "vue-flow-demo": "vue-flow-demo"
 }

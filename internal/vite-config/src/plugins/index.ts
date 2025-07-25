@@ -20,6 +20,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import viteVueDevTools from 'vite-plugin-vue-devtools';
 
 import { viteArchiverPlugin } from './archiver';
+import addIconSetPlugin from './dynamic-icon';
 import { viteExtraAppConfigPlugin } from './extra-app-config';
 import { viteImportMapPlugin } from './importmap';
 import { viteInjectAppLoadingPlugin } from './inject-app-loading';
@@ -134,7 +135,13 @@ async function loadApplicationPlugins(
     },
     {
       condition: isPackageExists('tailwindcss'),
-      plugins: () => [tailwindcss()],
+      plugins: () => [
+        tailwindcss(),
+        addIconSetPlugin({
+          path: `${process.cwd()}/src/assets/svg-icons`,
+          prefix: 'custom',
+        }),
+      ],
     },
     {
       condition: true,
@@ -169,7 +176,7 @@ async function loadApplicationPlugins(
     },
     {
       condition: pwa,
-      plugins: () =>
+      plugins: () => [
         VitePWA({
           injectRegister: false,
           workbox: {
@@ -183,6 +190,7 @@ async function loadApplicationPlugins(
             ...pwaOptions?.manifest,
           },
         }),
+      ],
     },
     {
       condition: isBuild && !!compress,

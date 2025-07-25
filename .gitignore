@@ -50,5 +50,6 @@ vite.config.ts.*
 *.sw?
 .history
 
-apps/web-naive/src/typings/auto-imports.d.ts
-apps/web-naive/src/typings/components.d.ts
+apps/**/**/src/typings/auto-imports.d.ts
+apps/**/**/src/typings/components.d.ts
+apps/**/**/src/assets/svg-icons/custom.json

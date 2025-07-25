@@ -22,6 +22,24 @@ const routes: RouteRecordRaw[] = [
         path: '/demos/tdesign',
         component: () => import('#/views/demos/tdesign/index.vue'),
       },
+      {
+        meta: {
+          title: $t('demos.vue-flow'),
+          icon: 'ep:set-up',
+        },
+        name: 'vue-flow-1',
+        path: '/demos/vue-flow',
+        component: () => import('#/views/demos/vue-flow/index.vue'),
+      },
+      {
+        meta: {
+          title: $t('demos.vue-flow-demo'),
+          icon: 'ep:set-up',
+        },
+        name: 'vue-flow-2',
+        path: '/demos/vue-flow-2',
+        component: () => import('#/views/demos/vue-flow-demo/index.vue'),
+      },
       // {
       //   meta: {
       //     title: $t('demos.table'),
@@ -38,14 +56,14 @@ const routes: RouteRecordRaw[] = [
       //   path: '/demos/form',
       //   component: () => import('#/views/demos/form/basic.vue'),
       // },
-      // {
-      //   meta: {
-      //     title: $t('demos.icons'),
-      //   },
-      //   name: 'Icons',
-      //   path: '/demos/icon',
-      //   component: () => import('#/views/demos/icons/index.vue'),
-      // },
+      {
+        meta: {
+          title: $t('demos.icons'),
+        },
+        name: 'Icons',
+        path: '/demos/icon',
+        component: () => import('#/views/demos/icons/index.vue'),
+      },
     ],
   },
 ];

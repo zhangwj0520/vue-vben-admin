@@ -8,7 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IconCustomAPlay: typeof import('~icons/custom/a-play')['default']
+    IconCustomHorizontal: typeof import('~icons/custom/horizontal')['default']
     IconCustomLogo: typeof import('~icons/custom/logo')['default']
+    IconCustomPlay: typeof import('~icons/custom/play')['default']
+    IconCustomShuffle: typeof import('~icons/custom/shuffle')['default']
+    IconCustomStop: typeof import('~icons/custom/stop')['default']
+    IconCustomVertical: typeof import('~icons/custom/vertical')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NDataTable: typeof import('naive-ui')['NDataTable']
@@ -23,5 +29,6 @@ declare module 'vue' {
     TDateRangePicker: typeof import('tdesign-vue-next')['DateRangePicker']
     TRow: typeof import('tdesign-vue-next')['Row']
     TSpace: typeof import('tdesign-vue-next')['Space']
+    TTButton: typeof import('tdesign-vue-next')['TButton']
   }
 }
