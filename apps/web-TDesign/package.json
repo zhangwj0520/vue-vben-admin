@@ -42,23 +42,23 @@
     "@vben/stores": "workspace:*",
     "@vben/types": "workspace:*",
     "@vben/utils": "workspace:*",
-    "@vue-flow/background": "^1.3.2",
-    "@vue-flow/controls": "^1.1.2",
-    "@vue-flow/core": "^1.45.0",
-    "@vue-flow/minimap": "^1.5.3",
-    "@vue-flow/node-resizer": "^1.5.0",
-    "@vue-flow/node-toolbar": "^1.1.1",
+    "@vue-flow/background": "catalog:",
+    "@vue-flow/controls": "catalog:",
+    "@vue-flow/core": "catalog:",
+    "@vue-flow/minimap": "catalog:",
+    "@vue-flow/node-resizer": "catalog:",
+    "@vue-flow/node-toolbar": "catalog:",
     "@vueuse/core": "catalog:",
-    "dagre": "^0.8.5",
-    "lodash-es": "^4.17.21",
+    "dagre": "catalog:",
+    "lodash-es": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
     "@iconify/tailwind": "catalog:",
-    "@iconify/tools": "^4.1.2",
-    "@types/dagre": "^0.7.53",
-    "tdesign-vue-next": "^1.15.1"
+    "@iconify/tools": "catalog:",
+    "@types/dagre": "catalog:",
+    "tdesign-vue-next": "catalog:"
   }
 }
