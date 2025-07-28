@@ -14,5 +14,6 @@
     "title": "项目"
   },
   "vue-flow": "vue-flow",
+  "vue-flow-darg": "vue-flow-拖拽",
   "vue-flow-demo": "vue-flow-demo"
 }

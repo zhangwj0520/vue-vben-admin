@@ -197,6 +197,11 @@ function reset() {
 </template>
 
 <style scoped>
+.vue-flow__edges {
+  width: 20px;
+  height: 20px;
+}
+
 .animated-edge-label {
   position: absolute;
   z-index: 100;

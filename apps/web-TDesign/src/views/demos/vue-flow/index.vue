@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { nextTick, ref } from 'vue';
 
-import { Background } from '@vue-flow/background';
 import { Controls } from '@vue-flow/controls';
 import { Panel, useVueFlow, VueFlow } from '@vue-flow/core';
 import { MiniMap } from '@vue-flow/minimap';
@@ -65,14 +64,18 @@ async function layoutGraph(direction) {
     <VueFlow
       :nodes="nodes"
       :edges="edges"
+      :nodes-draggable="false"
       @nodes-initialized="layoutGraph('LR')"
     >
-      <template #node-custom="props">
-        <CustomNode :data="props.data" />
+      <template #node-custom="nodeProps">
+        <CustomNode :data="nodeProps.data" />
       </template>
       <template #node-process="props">
         <ProcessNode
+          :all-data="props"
+          :id="props.id"
           :data="props.data"
+          :selected="props.selected"
           :source-position="props.sourcePosition"
           :target-position="props.targetPosition"
         />
@@ -95,7 +98,7 @@ async function layoutGraph(direction) {
       <MiniMap />
       <!-- https://vueflow.dev/guide/components/background.html  -->
       <!-- 背景 -->
-      <Background variant="lines" gap="10" size="10" />
+      <!-- <Background variant="lines" :gap="10" :size="10" /> -->
 
       <Controls />
 

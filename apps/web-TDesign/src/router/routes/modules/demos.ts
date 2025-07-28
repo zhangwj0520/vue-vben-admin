@@ -40,6 +40,15 @@ const routes: RouteRecordRaw[] = [
         path: '/demos/vue-flow-2',
         component: () => import('#/views/demos/vue-flow-demo/index.vue'),
       },
+      {
+        meta: {
+          title: $t('demos.vue-flow-darg'),
+          icon: 'tdesign:drag-move',
+        },
+        name: 'vue-flow-3',
+        path: '/demos/vue-flow-4',
+        component: () => import('#/views/demos/vue-flow-drag/index.vue'),
+      },
       // {
       //   meta: {
       //     title: $t('demos.table'),

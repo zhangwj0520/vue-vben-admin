@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { toRef } from 'vue';
 
-import { Handle, useNodeConnections, useVueFlow } from '@vue-flow/core';
-import { NodeResizer } from '@vue-flow/node-resizer';
+import { Handle, useNodeConnections } from '@vue-flow/core';
 
 import AnalyticsVisitsData from './analytics-visits-data.vue';
-
-// make sure to include the necessary styles!
-import '@vue-flow/node-resizer/dist/style.css';
 
 // props 解构
 // defineProps(['id', 'data', 'selected'])
@@ -36,9 +32,6 @@ const props = defineProps({
     type: String,
   },
 });
-
-// 可选：更新节点状态时触发 VueFlow 的 updateNode
-const { updateNode } = useVueFlow();
 
 watchEffect(() => {
   console.log('allData', props.allData);
@@ -105,35 +98,25 @@ const processLabel = toRef(() => {
 const handleNodeClick = () => {
   console.log('click', 1111);
 };
-
-const handleResizeStart = ({ params }) => {
-  console.log('resize start', params);
-  updateNode(props.id, { data: { ...props.data, ...params } });
-};
 </script>
 
 <template>
   <div v-if="props.data.hasError" class="h-1 w-1 rounded-3xl bg-red-300"></div>
-
   <div
     v-if="props.data.customType === 'echart'"
-    class="-z-20 h-80 w-80 overflow-hidden bg-white"
+    class="-z-20 h-80 w-80 bg-white"
     @click="handleNodeClick"
-    :style="{
-      width: `${props.data.width}px`,
-      height: `${props.data.height}px`,
-    }"
   >
-    <!-- 内容 -->
-    <AnalyticsVisitsData />
-    <!-- Resizer -->
-    <NodeResizer
+    <!-- <NodeResizer
       :min-width="100"
       :min-height="60"
+      :max-width="400"
+      :max-height="300"
       :is-visible="selected"
       :node-id="id"
-      @resize-end="handleResizeStart"
-    />
+    /> -->
+
+    <AnalyticsVisitsData />
   </div>
   <div
     v-else
