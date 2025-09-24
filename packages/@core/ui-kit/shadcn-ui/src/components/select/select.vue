@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { CircleX } from '@vben-core/icons';
+import { CircleX } from '@hj-fe-core/icons';
 
 import {
   Select,

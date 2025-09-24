@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { Fallback, VbenButton } from '@vben/common-ui';
-import { useTabs } from '@vben/hooks';
-import { X } from '@vben/icons';
+import { Fallback, VbenButton } from '@hj-fe/common-ui';
+import { useTabs } from '@hj-fe/hooks';
+import { X } from '@hj-fe/icons';
 
 const { closeCurrentTab } = useTabs();
 </script>

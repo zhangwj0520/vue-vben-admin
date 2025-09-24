@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { Component } from 'vue';
 
-import type { ThemeModeType } from '@vben/types';
+import type { ThemeModeType } from '@hj-fe/types';
 
-import { MoonStar, Sun, SunMoon } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { MoonStar, Sun, SunMoon } from '@hj-fe/icons';
+import { $t } from '@hj-fe/locales';
 
 import SwitchItem from '../switch-item.vue';
 

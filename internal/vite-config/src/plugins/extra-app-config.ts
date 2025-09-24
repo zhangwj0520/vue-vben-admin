@@ -4,7 +4,7 @@ import {
   colors,
   generatorContentHash,
   readPackageJSON,
-} from '@vben/node-utils';
+} from '@hj-fe/node-utils';
 
 import { loadEnv } from '../utils/env';
 

@@ -4,11 +4,11 @@ import type {
   VxeTableGridOptions,
 } from '@/adapter/vxe-table';
 
-import { Page, useVbenDrawer } from '@vben/common-ui';
-import { IconifyIcon, Plus } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { Page, useVbenDrawer } from '@hj-fe/common-ui';
+import { IconifyIcon, Plus } from '@hj-fe/icons';
+import { $t } from '@hj-fe/locales';
 
-import { MenuBadge } from '@vben-core/menu-ui';
+import { MenuBadge } from '@hj-fe-core/menu-ui';
 
 import { Button, message } from 'ant-design-vue';
 

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useAppConfig } from '@vben/hooks';
-import { MdiGithub, MdiGoogle, MdiQqchat, MdiWechat } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { useAppConfig } from '@hj-fe/hooks';
+import { MdiGithub, MdiGoogle, MdiQqchat, MdiWechat } from '@hj-fe/icons';
+import { $t } from '@hj-fe/locales';
 
-import { VbenIconButton } from '@vben-core/shadcn-ui';
+import { VbenIconButton } from '@hj-fe-core/shadcn-ui';
 
 import DingdingLogin from './dingding-login.vue';
 

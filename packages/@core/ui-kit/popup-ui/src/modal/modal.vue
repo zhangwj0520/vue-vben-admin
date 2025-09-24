@@ -16,8 +16,8 @@ import {
   useIsMobile,
   usePriorityValues,
   useSimpleLocale,
-} from '@vben-core/composables';
-import { Expand, Shrink } from '@vben-core/icons';
+} from '@hj-fe-core/composables';
+import { Expand, Shrink } from '@hj-fe-core/icons';
 import {
   Dialog,
   DialogContent,
@@ -30,10 +30,10 @@ import {
   VbenIconButton,
   VbenLoading,
   VisuallyHidden,
-} from '@vben-core/shadcn-ui';
-import { ELEMENT_ID_MAIN_CONTENT } from '@vben-core/shared/constants';
-import { globalShareState } from '@vben-core/shared/global-state';
-import { cn } from '@vben-core/shared/utils';
+} from '@hj-fe-core/shadcn-ui';
+import { ELEMENT_ID_MAIN_CONTENT } from '@hj-fe-core/shared/constants';
+import { globalShareState } from '@hj-fe-core/shared/global-state';
+import { cn } from '@hj-fe-core/shared/utils';
 
 import { useModalDraggable } from './use-modal-draggable';
 

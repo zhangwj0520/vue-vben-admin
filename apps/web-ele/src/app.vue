@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useElementPlusDesignTokens } from '@vben/hooks';
+import { useElementPlusDesignTokens } from '@hj-fe/hooks';
 
 import { ElConfigProvider } from 'element-plus';
 

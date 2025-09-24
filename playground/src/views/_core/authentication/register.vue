@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@vben/common-ui';
-import type { Recordable } from '@vben/types';
+import type { VbenFormSchema } from '@hj-fe/common-ui';
+import type { Recordable } from '@hj-fe/types';
 
 import { computed, h, ref } from 'vue';
 
-import { AuthenticationRegister, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { AuthenticationRegister, z } from '@hj-fe/common-ui';
+import { $t } from '@hj-fe/locales';
 
 defineOptions({ name: 'Register' });
 

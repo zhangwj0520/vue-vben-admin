@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '@hj-fe-core/shared/utils';
 
 import { useVModel } from '@vueuse/core';
 

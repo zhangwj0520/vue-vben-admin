@@ -1,4 +1,4 @@
-import { defineOverridesPreferences } from '@vben/preferences';
+import { defineOverridesPreferences } from '@hj-fe/preferences';
 
 /**
  * @description 项目配置文件

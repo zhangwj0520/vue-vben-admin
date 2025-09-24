@@ -1,4 +1,4 @@
-import { getScrollbarWidth, needsScrollbar } from '@vben-core/shared/utils';
+import { getScrollbarWidth, needsScrollbar } from '@hj-fe-core/shared/utils';
 
 import {
   useScrollLock as _useScrollLock,

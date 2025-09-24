@@ -1,4 +1,4 @@
-import type { RouteRecordStringComponent } from '@vben/types';
+import type { RouteRecordStringComponent } from '@hj-fe/types';
 
 import { requestClient } from '@/api/request';
 

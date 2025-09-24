@@ -1,11 +1,11 @@
-import type { Recordable, UserInfo } from '@vben/types';
+import type { Recordable, UserInfo } from '@hj-fe/types';
 
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { LOGIN_PATH } from '@vben/constants';
-import { preferences } from '@vben/preferences';
-import { resetAllStores, useAccessStore, useUserStore } from '@vben/stores';
+import { LOGIN_PATH } from '@hj-fe/constants';
+import { preferences } from '@hj-fe/preferences';
+import { resetAllStores, useAccessStore, useUserStore } from '@hj-fe/stores';
 
 import { ElNotification } from 'element-plus';
 import { defineStore } from 'pinia';

@@ -5,8 +5,8 @@ import type { ValueType, VbenButtonGroupProps } from './button';
 
 import { computed, ref, watch } from 'vue';
 
-import { Circle, CircleCheckBig, LoaderCircle } from '@vben-core/icons';
-import { cn, isFunction } from '@vben-core/shared/utils';
+import { Circle, CircleCheckBig, LoaderCircle } from '@hj-fe-core/icons';
+import { cn, isFunction } from '@hj-fe-core/shared/utils';
 
 import { objectOmit } from '@vueuse/core';
 

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import type { Component } from 'vue';
 
-import type { AnyPromiseFunction } from '@vben/types';
+import type { AnyPromiseFunction } from '@hj-fe/types';
 
 import { computed, nextTick, ref, unref, useAttrs, watch } from 'vue';
 
-import { LoaderCircle } from '@vben/icons';
+import { LoaderCircle } from '@hj-fe/icons';
 
-import { cloneDeep, get, isEqual, isFunction } from '@vben-core/shared/utils';
+import { cloneDeep, get, isEqual, isFunction } from '@hj-fe-core/shared/utils';
 
 import { objectOmit } from '@vueuse/core';
 

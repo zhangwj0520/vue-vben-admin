@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { VbenFormSchema } from '@vben-core/form-ui';
+import type { VbenFormSchema } from '@hj-fe-core/form-ui';
 
 import { computed, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { $t } from '@vben/locales';
+import { $t } from '@hj-fe/locales';
 
-import { useVbenForm } from '@vben-core/form-ui';
-import { VbenButton } from '@vben-core/shadcn-ui';
+import { useVbenForm } from '@hj-fe-core/form-ui';
+import { VbenButton } from '@hj-fe-core/shadcn-ui';
 
 import Title from './auth-title.vue';
 

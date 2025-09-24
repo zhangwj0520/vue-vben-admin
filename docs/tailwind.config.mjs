@@ -1,4 +1,4 @@
-import tailwindcssConfig from '@vben/tailwind-config';
+import tailwindcssConfig from '@hj-fe/tailwind-config';
 
 export default {
   ...tailwindcssConfig,

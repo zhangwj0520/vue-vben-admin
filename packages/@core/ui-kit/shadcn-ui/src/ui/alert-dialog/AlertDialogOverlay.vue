@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useScrollLock } from '@vben-core/composables';
+import { useScrollLock } from '@hj-fe-core/composables';
 
 useScrollLock();
 </script>

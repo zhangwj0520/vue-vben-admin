@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { About } from '@vben/common-ui';
+import { About } from '@hj-fe/common-ui';
 
 defineOptions({ name: 'About' });
 </script>

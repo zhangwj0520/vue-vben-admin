@@ -4,9 +4,9 @@ import type {
   ComponentRecordType,
   GenerateMenuAndRoutesOptions,
   RouteRecordStringComponent,
-} from '@vben-core/typings';
+} from '@hj-fe-core/typings';
 
-import { mapTree } from '@vben-core/shared/utils';
+import { mapTree } from '@hj-fe-core/shared/utils';
 
 /**
  * 动态生成路由 - 后端方式

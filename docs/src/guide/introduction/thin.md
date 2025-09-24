@@ -56,16 +56,16 @@ pnpm install
 ```json
 {
   "scripts": {
-    "build:antd": "pnpm run build --filter=@vben/web-antd",
-    "build:docs": "pnpm run build --filter=@vben/docs",
-    "build:ele": "pnpm run build --filter=@vben/web-ele",
-    "build:naive": "pnpm run build --filter=@vben/web-naive",
-    "build:play": "pnpm run build --filter=@vben/playground",
-    "dev:antd": "pnpm -F @vben/web-antd run dev",
-    "dev:docs": "pnpm -F @vben/docs run dev",
-    "dev:ele": "pnpm -F @vben/web-ele run dev",
-    "dev:play": "pnpm -F @vben/playground run dev",
-    "dev:naive": "pnpm -F @vben/web-naive run dev"
+    "build:antd": "pnpm run build --filter=@hj-fe/web-antd",
+    "build:docs": "pnpm run build --filter=@hj-fe/docs",
+    "build:ele": "pnpm run build --filter=@hj-fe/web-ele",
+    "build:naive": "pnpm run build --filter=@hj-fe/web-naive",
+    "build:play": "pnpm run build --filter=@hj-fe/playground",
+    "dev:antd": "pnpm -F @hj-fe/web-antd run dev",
+    "dev:docs": "pnpm -F @hj-fe/docs run dev",
+    "dev:ele": "pnpm -F @hj-fe/web-ele run dev",
+    "dev:play": "pnpm -F @hj-fe/playground run dev",
+    "dev:naive": "pnpm -F @hj-fe/web-naive run dev"
   }
 }
 ```

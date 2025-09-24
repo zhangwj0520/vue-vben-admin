@@ -20,7 +20,7 @@ outline: deep
 
 ```vue
 <script lang="ts" setup>
-import { ApiComponent } from '@vben/common-ui';
+import { ApiComponent } from '@hj-fe/common-ui';
 
 import { Cascader } from 'ant-design-vue';
 

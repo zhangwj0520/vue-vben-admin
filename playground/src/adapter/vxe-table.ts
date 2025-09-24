@@ -1,17 +1,17 @@
-import type { VxeTableGridOptions } from '@vben/plugins/vxe-table';
-import type { Recordable } from '@vben/types';
+import type { VxeTableGridOptions } from '@hj-fe/plugins/vxe-table';
+import type { Recordable } from '@hj-fe/types';
 
 import type { ComponentType } from './component';
 
 import { h } from 'vue';
 
-import { IconifyIcon } from '@vben/icons';
-import { $te } from '@vben/locales';
+import { IconifyIcon } from '@hj-fe/icons';
+import { $te } from '@hj-fe/locales';
 import {
   setupVbenVxeTable,
   useVbenVxeGrid as useGrid,
-} from '@vben/plugins/vxe-table';
-import { get, isFunction, isString } from '@vben/utils';
+} from '@hj-fe/plugins/vxe-table';
+import { get, isFunction, isString } from '@hj-fe/utils';
 
 import { objectOmit } from '@vueuse/core';
 import { Button, Image, Popconfirm, Switch, Tag } from 'ant-design-vue';
@@ -294,4 +294,4 @@ export type OnActionClickParams<T = Recordable<any>> = {
 export type OnActionClickFn<T = Recordable<any>> = (
   params: OnActionClickParams<T>,
 ) => void;
-export type * from '@vben/plugins/vxe-table';
+export type * from '@hj-fe/plugins/vxe-table';

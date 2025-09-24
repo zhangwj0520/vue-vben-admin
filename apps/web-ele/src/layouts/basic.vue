@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import type { NotificationItem } from '@vben/layouts';
+import type { NotificationItem } from '@hj-fe/layouts';
 
 import { computed, ref, watch } from 'vue';
 
-import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
-import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@vben/constants';
-import { useWatermark } from '@vben/hooks';
-import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
+import { AuthenticationLoginExpiredModal } from '@hj-fe/common-ui';
+import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@hj-fe/constants';
+import { useWatermark } from '@hj-fe/hooks';
+import { BookOpenText, CircleHelp, MdiGithub } from '@hj-fe/icons';
 import {
   BasicLayout,
   LockScreen,
   Notification,
   UserDropdown,
-} from '@vben/layouts';
-import { preferences } from '@vben/preferences';
-import { useAccessStore, useUserStore } from '@vben/stores';
-import { openWindow } from '@vben/utils';
+} from '@hj-fe/layouts';
+import { preferences } from '@hj-fe/preferences';
+import { useAccessStore, useUserStore } from '@hj-fe/stores';
+import { openWindow } from '@hj-fe/utils';
 
 import { $t } from '@/locales';
 import { useAuthStore } from '@/store';

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 
-import { Settings } from '@vben/icons';
-import { $t, loadLocaleMessages } from '@vben/locales';
-import { preferences, updatePreferences } from '@vben/preferences';
-import { capitalizeFirstLetter } from '@vben/utils';
+import { Settings } from '@hj-fe/icons';
+import { $t, loadLocaleMessages } from '@hj-fe/locales';
+import { preferences, updatePreferences } from '@hj-fe/preferences';
+import { capitalizeFirstLetter } from '@hj-fe/utils';
 
-import { useVbenDrawer } from '@vben-core/popup-ui';
-import { VbenButton } from '@vben-core/shadcn-ui';
+import { useVbenDrawer } from '@hj-fe-core/popup-ui';
+import { VbenButton } from '@hj-fe-core/shadcn-ui';
 
 import PreferencesDrawer from './preferences-drawer.vue';
 

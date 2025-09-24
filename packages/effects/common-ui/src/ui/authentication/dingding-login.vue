@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 
-import { RiDingding } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { RiDingding } from '@hj-fe/icons';
+import { $t } from '@hj-fe/locales';
 
-import { alert, useVbenModal } from '@vben-core/popup-ui';
-import { VbenIconButton } from '@vben-core/shadcn-ui';
-import { loadScript } from '@vben-core/shared/utils';
+import { alert, useVbenModal } from '@hj-fe-core/popup-ui';
+import { VbenIconButton } from '@hj-fe-core/shadcn-ui';
+import { loadScript } from '@hj-fe-core/shared/utils';
 
 interface Props {
   clientId: string;

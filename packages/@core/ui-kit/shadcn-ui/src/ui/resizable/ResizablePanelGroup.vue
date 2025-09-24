@@ -5,7 +5,7 @@ import type { HTMLAttributes } from 'vue';
 
 import { computed } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '@hj-fe-core/shared/utils';
 
 import { SplitterGroup, useForwardPropsEmits } from 'radix-vue';
 

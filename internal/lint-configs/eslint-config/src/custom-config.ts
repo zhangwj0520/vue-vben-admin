@@ -71,7 +71,7 @@ const customConfig: Linter.Config[] = [
     },
   },
   {
-    // @core内部组件，不能引入@vben/* 里面的包
+    // @core内部组件，不能引入@hj-fe/* 里面的包
     files: ['packages/@core/**/**'],
     ignores: restrictedImportIgnores,
     rules: {
@@ -80,7 +80,7 @@ const customConfig: Linter.Config[] = [
         {
           patterns: [
             {
-              group: ['@vben/*'],
+              group: ['@hj-fe/*'],
               message:
                 'The @core package cannot import the @vben package, please use the @core package itself',
             },
@@ -90,7 +90,7 @@ const customConfig: Linter.Config[] = [
     },
   },
   {
-    // @core/shared内部组件，不能引入@vben/* 或者 @vben-core/* 里面的包
+    // @core/shared内部组件，不能引入@hj-fe/* 或者 @hj-fe-core/* 里面的包
     files: ['packages/@core/base/**/**'],
     ignores: restrictedImportIgnores,
     rules: {
@@ -99,9 +99,9 @@ const customConfig: Linter.Config[] = [
         {
           patterns: [
             {
-              group: ['@vben/*', '@vben-core/*'],
+              group: ['@hj-fe/*', '@hj-fe-core/*'],
               message:
-                'The @vben-core/shared package cannot import the @vben package, please use the @core/shared package itself',
+                'The @hj-fe-core/shared package cannot import the @vben package, please use the @core/shared package itself',
             },
           ],
         },
@@ -110,7 +110,7 @@ const customConfig: Linter.Config[] = [
   },
 
   {
-    // 不能引入@vben/*里面的包
+    // 不能引入@hj-fe/*里面的包
     files: [
       'packages/types/**/**',
       'packages/utils/**/**',
@@ -128,7 +128,7 @@ const customConfig: Linter.Config[] = [
         {
           patterns: [
             {
-              group: ['@vben/*'],
+              group: ['@hj-fe/*'],
               message:
                 'The @vben package cannot be imported, please use the @core package itself',
             },

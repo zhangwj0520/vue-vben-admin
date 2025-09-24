@@ -1,15 +1,15 @@
-import { defineConfig } from '@vben/vite-config';
+import { defineConfig } from '@hj-fe/vite-config';
 
-import ElementPlus from 'unplugin-element-plus/vite';
+// import ElementPlus from 'unplugin-element-plus/vite';
 
 export default defineConfig(async () => {
   return {
     application: {},
     vite: {
       plugins: [
-        ElementPlus({
-          format: 'esm',
-        }),
+        // ElementPlus({
+        //   format: 'esm',
+        // }),
       ],
       server: {
         proxy: {

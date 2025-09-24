@@ -1,1 +1,1 @@
-import '@vben-core/design';
+import '@hj-fe-core/design';

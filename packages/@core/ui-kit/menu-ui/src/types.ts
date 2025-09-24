@@ -1,6 +1,6 @@
 import type { Component, Ref } from 'vue';
 
-import type { MenuRecordBadgeRaw, ThemeModeType } from '@vben-core/typings';
+import type { MenuRecordBadgeRaw, ThemeModeType } from '@hj-fe-core/typings';
 
 interface MenuProps {
   /**

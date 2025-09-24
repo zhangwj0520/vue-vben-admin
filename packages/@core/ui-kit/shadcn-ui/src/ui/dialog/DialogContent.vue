@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'radix-vue';
 
-import type { ClassType } from '@vben-core/typings';
+import type { ClassType } from '@hj-fe-core/typings';
 
 import { computed, ref } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '@hj-fe-core/shared/utils';
 
 import { X } from 'lucide-vue-next';
 import { DialogClose, DialogContent, useForwardPropsEmits } from 'radix-vue';

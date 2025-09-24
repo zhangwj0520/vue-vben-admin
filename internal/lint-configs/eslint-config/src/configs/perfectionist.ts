@@ -24,13 +24,13 @@ export async function perfectionist(): Promise<Linter.Config[]> {
           {
             customGroups: {
               type: {
-                'vben-core-type': ['^@vben-core/.+'],
-                'vben-type': ['^@vben/.+'],
+                'vben-core-type': ['^@hj-fe-core/.+'],
+                'vben-type': ['^@hj-fe/.+'],
                 'vue-type': ['^vue$', '^vue-.+', '^@vue/.+'],
               },
               value: {
-                vben: ['^@vben/.+'],
-                'vben-core': ['^@vben-core/.+'],
+                vben: ['^@hj-fe/.+'],
+                'vben-core': ['^@hj-fe-core/.+'],
                 vue: ['^vue$', '^vue-.+', '^@vue/.+'],
               },
             },

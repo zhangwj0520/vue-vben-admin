@@ -7,7 +7,7 @@ import type {
 
 import type { CSSProperties } from 'vue';
 
-import type { ClassType } from '@vben-core/typings';
+import type { ClassType } from '@hj-fe-core/typings';
 
 import { computed } from 'vue';
 

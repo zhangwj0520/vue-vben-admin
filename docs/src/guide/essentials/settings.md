@@ -107,7 +107,7 @@ Object.defineProperty(window, '_VBEN_ADMIN_PRO_APP_CONF_', {
 
 ### 使用
 
-想要获取 `_app.config.js` 内的变量，需要使用`@vben/hooks`提供的 `useAppConfig`方法。
+想要获取 `_app.config.js` 内的变量，需要使用`@hj-fe/hooks`提供的 `useAppConfig`方法。
 
 ```ts
 const { apiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
@@ -179,8 +179,8 @@ const { otherApiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
 如果你找不到文档说明，可以尝试自己配置好以后，点击`复制偏好设置`，覆盖项目默认即可。配置文件位于应用目录下的`preferences.ts`，在这里，你可以覆盖框架默认的配置，实现自定义配置。
 
 ```ts
-import { useAppConfig } from '@vben/hooks';
-import { defineOverridesPreferences } from '@vben/preferences';
+import { useAppConfig } from '@hj-fe/hooks';
+import { defineOverridesPreferences } from '@hj-fe/preferences';
 
 /**
  * @description 项目配置文件

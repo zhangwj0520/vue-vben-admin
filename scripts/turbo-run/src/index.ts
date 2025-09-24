@@ -1,4 +1,4 @@
-import { colors, consola } from '@vben/node-utils';
+import { colors, consola } from '@hj-fe/node-utils';
 
 import { cac } from 'cac';
 

@@ -2,12 +2,12 @@
 import type {
   CaptchaVerifyPassingData,
   SliderCaptchaActionType,
-} from '@vben/common-ui';
+} from '@hj-fe/common-ui';
 
 import { ref } from 'vue';
 
-import { Page, SliderCaptcha } from '@vben/common-ui';
-import { Bell, Sun } from '@vben/icons';
+import { Page, SliderCaptcha } from '@hj-fe/common-ui';
+import { Bell, Sun } from '@hj-fe/icons';
 
 import { Button, Card, message } from 'ant-design-vue';
 

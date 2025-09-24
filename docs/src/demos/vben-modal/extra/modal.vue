@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useVbenModal } from '@vben/common-ui';
+import { useVbenModal } from '@hj-fe/common-ui';
 
 const [Modal] = useVbenModal();
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useVbenDrawer } from '@vben/common-ui';
+import { useVbenDrawer } from '@hj-fe/common-ui';
 
 const [Drawer] = useVbenDrawer();
 </script>

@@ -3,8 +3,8 @@ import type { VbenButtonProps } from './button';
 
 import { computed } from 'vue';
 
-import { LoaderCircle } from '@vben-core/icons';
-import { cn } from '@vben-core/shared/utils';
+import { LoaderCircle } from '@hj-fe-core/icons';
+import { cn } from '@hj-fe-core/shared/utils';
 
 import { Primitive } from 'radix-vue';
 

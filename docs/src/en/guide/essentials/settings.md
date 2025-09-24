@@ -108,7 +108,7 @@ Object.defineProperty(window, '_VBEN_ADMIN_PRO_APP_CONF_', {
 
 ### Usage
 
-To access the variables inside `_app.config.js`, you need to use the `useAppConfig` method provided by `@vben/hooks`.
+To access the variables inside `_app.config.js`, you need to use the `useAppConfig` method provided by `@hj-fe/hooks`.
 
 ```ts
 const { apiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
@@ -180,8 +180,8 @@ The project offers a wide range of preference settings for dynamically configuri
 If you cannot find documentation for a setting, you can try configuring it yourself and then click `Copy Preferences` to override the project defaults. The configuration file is located in the application directory under `preferences.ts`, where you can override the framework's default configurations to achieve custom settings.
 
 ```ts
-import { useAppConfig } from '@vben/hooks';
-import { defineOverridesPreferences } from '@vben/preferences';
+import { useAppConfig } from '@hj-fe/hooks';
+import { defineOverridesPreferences } from '@hj-fe/preferences';
 
 /**
  * @description Project configuration file

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@vben/common-ui';
-import type { BasicOption, Recordable } from '@vben/types';
+import type { VbenFormSchema } from '@hj-fe/common-ui';
+import type { BasicOption, Recordable } from '@hj-fe/types';
 
 import { computed, markRaw, useTemplateRef } from 'vue';
 
-import { AuthenticationLogin, SliderCaptcha, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { AuthenticationLogin, SliderCaptcha, z } from '@hj-fe/common-ui';
+import { $t } from '@hj-fe/locales';
 
 import { useAuthStore } from '@/store';
 

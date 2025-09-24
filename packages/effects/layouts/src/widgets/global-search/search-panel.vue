@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { MenuRecordRaw } from '@vben/types';
+import type { MenuRecordRaw } from '@hj-fe/types';
 
 import { nextTick, onMounted, ref, shallowRef, watch } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { SearchX, X } from '@vben/icons';
-import { $t } from '@vben/locales';
-import { mapTree, traverseTreeValues, uniqueByField } from '@vben/utils';
+import { SearchX, X } from '@hj-fe/icons';
+import { $t } from '@hj-fe/locales';
+import { mapTree, traverseTreeValues, uniqueByField } from '@hj-fe/utils';
 
-import { VbenIcon, VbenScrollbar } from '@vben-core/shadcn-ui';
-import { isHttpUrl } from '@vben-core/shared/utils';
+import { VbenIcon, VbenScrollbar } from '@hj-fe-core/shadcn-ui';
+import { isHttpUrl } from '@hj-fe-core/shared/utils';
 
 import { onKeyStroke, useLocalStorage, useThrottleFn } from '@vueuse/core';
 

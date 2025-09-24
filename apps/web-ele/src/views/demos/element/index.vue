@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { Page } from '@vben/common-ui';
+import { Page } from '@hj-fe/common-ui';
 
 import { ElMessage, ElNotification } from 'element-plus';
 
