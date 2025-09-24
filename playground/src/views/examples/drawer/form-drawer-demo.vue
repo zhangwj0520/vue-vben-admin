@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useVbenDrawer } from '@vben/common-ui';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 defineOptions({
   name: 'FormDrawerDemo',

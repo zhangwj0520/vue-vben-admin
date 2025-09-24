@@ -5,7 +5,7 @@ import { Page } from '@vben/common-ui';
 
 import { Alert, Button, Card } from 'ant-design-vue';
 
-import { getBigIntData } from '#/api/examples/json-bigint';
+import { getBigIntData } from '@/api/examples/json-bigint';
 
 const response = ref('');
 function fetchData() {

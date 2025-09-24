@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import type { VbenFormProps } from '#/adapter/form';
-import type { VxeTableGridOptions } from '#/adapter/vxe-table';
+import type { VbenFormProps } from '@/adapter/form';
+import type { VxeTableGridOptions } from '@/adapter/vxe-table';
 
 import { Page } from '@vben/common-ui';
 
 import { message } from 'ant-design-vue';
 import dayjs from 'dayjs';
 
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
-import { getExampleTableApi } from '#/api';
+import { useVbenVxeGrid } from '@/adapter/vxe-table';
+import { getExampleTableApi } from '@/api';
 
 interface RowType {
   category: string;

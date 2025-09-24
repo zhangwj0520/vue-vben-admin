@@ -5,7 +5,7 @@ import { Page } from '@vben/common-ui';
 
 import { Card, Input, message } from 'ant-design-vue';
 
-import { useVbenForm, z } from '#/adapter/form';
+import { useVbenForm, z } from '@/adapter/form';
 
 import TwoFields from './modules/two-fields.vue';
 
@@ -26,7 +26,7 @@ const [Form] = useVbenForm({
   layout: 'horizontal',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       fieldName: 'field',
       label: '自定义后缀',

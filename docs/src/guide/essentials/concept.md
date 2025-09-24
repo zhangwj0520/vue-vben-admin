@@ -44,12 +44,12 @@ import { isString } from '@vben/utils';
 
 ## 别名
 
-在项目中，你可以看到一些 `#` 开头的路径，例如： `#/api`、`#/views`, 这些路径都是别名，用于快速定位到某个目录。它不是通过 `vite` 的 `alias` 实现的，而是通过 `Node.js` 本身的 [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) 原理。只需要在 `package.json` 中配置 `imports` 字段即可。
+在项目中，你可以看到一些 `#` 开头的路径，例如： `@/api`、`@/views`, 这些路径都是别名，用于快速定位到某个目录。它不是通过 `vite` 的 `alias` 实现的，而是通过 `Node.js` 本身的 [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) 原理。只需要在 `package.json` 中配置 `imports` 字段即可。
 
 ```json {3}
 {
   "imports": {
-    "#/*": "./src/*"
+    "@/*": "./src/*"
   }
 }
 ```
@@ -61,7 +61,7 @@ import { isString } from '@vben/utils';
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["src/*"]
+      "@/*": ["src/*"]
     }
   }
 }

@@ -4,11 +4,11 @@ outline: deep
 
 # Vben Vxe Table 表格
 
-框架提供的Table 列表组件基于 [vxe-table](https://vxetable.cn/v4/#/grid/api?apiKey=grid)，结合`Vben Form 表单`进行了二次封装。
+框架提供的Table 列表组件基于 [vxe-table](https://vxetable.cn/v4/@/grid/api?apiKey=grid)，结合`Vben Form 表单`进行了二次封装。
 
 其中，表头的 **表单搜索** 部分采用了`Vben Form表单`，表格主体部分使用了`vxe-grid`组件，支持表格的分页、排序、筛选等功能。
 
-> 如果文档内没有参数说明，可以尝试在在线示例或者在 [vxe-grid 官方API 文档](https://vxetable.cn/v4/#/grid/api?apiKey=grid) 内寻找
+> 如果文档内没有参数说明，可以尝试在在线示例或者在 [vxe-grid 官方API 文档](https://vxetable.cn/v4/@/grid/api?apiKey=grid) 内寻找
 
 ::: info 写在前面
 
@@ -18,7 +18,7 @@ outline: deep
 
 ## 适配器
 
-表格底层使用 [vxe-table](https://vxetable.cn/#/start/install) 进行实现，所以你可以使用 `vxe-table` 的所有功能。对于不同的 UI 框架，我们提供了适配器，以便更好的适配不同的 UI 框架。
+表格底层使用 [vxe-table](https://vxetable.cn/@/start/install) 进行实现，所以你可以使用 `vxe-table` 的所有功能。对于不同的 UI 框架，我们提供了适配器，以便更好的适配不同的 UI 框架。
 
 ### 适配器说明
 
@@ -202,7 +202,7 @@ const [Grid] = useVbenVxeGrid({
 
 通过 scroll-y.enabled 与 scroll-y.gt 组合开启，其中 enabled 为总开关，gt 是指当总行数大于指定行数时自动开启。
 
-> 参考 [vxe-table 官方文档 - 虚拟滚动](https://vxetable.cn/v4/#/component/grid/scroll/vertical)。
+> 参考 [vxe-table 官方文档 - 虚拟滚动](https://vxetable.cn/v4/@/component/grid/scroll/vertical)。
 
 <DemoPreview dir="demos/vben-vxe-table/virtual" />
 
@@ -212,7 +212,7 @@ const [Grid] = useVbenVxeGrid({
 
 ```vue
 <script setup lang="ts">
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
+import { useVbenVxeGrid } from '@/adapter/vxe-table';
 
 // Grid 为表格组件
 // gridApi 为表格的方法
@@ -261,7 +261,7 @@ useVbenVxeGrid 返回的第二个参数，是一个对象，包含了一些表�
 
 ## Slots
 
-大部分插槽的说明请参考 [vxe-table 官方文档](https://vxetable.cn/v4/#/grid/api)，但工具栏部分由于做了一些定制封装，需使用以下插槽定制表格的工具栏：
+大部分插槽的说明请参考 [vxe-table 官方文档](https://vxetable.cn/v4/@/grid/api)，但工具栏部分由于做了一些定制封装，需使用以下插槽定制表格的工具栏：
 
 | 插槽名          | 描述                                         |
 | --------------- | -------------------------------------------- |

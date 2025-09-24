@@ -3,7 +3,7 @@ import type { DataNode } from 'ant-design-vue/es/tree';
 
 import type { Recordable } from '@vben/types';
 
-import type { SystemRoleApi } from '#/api/system/role';
+import type { SystemRoleApi } from '@/api/system/role';
 
 import { computed, nextTick, ref } from 'vue';
 
@@ -12,10 +12,10 @@ import { IconifyIcon } from '@vben/icons';
 
 import { Spin } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
-import { getMenuList } from '#/api/system/menu';
-import { createRole, updateRole } from '#/api/system/role';
-import { $t } from '#/locales';
+import { useVbenForm } from '@/adapter/form';
+import { getMenuList } from '@/api/system/menu';
+import { createRole, updateRole } from '@/api/system/role';
+import { $t } from '@/locales';
 
 import { useFormSchema } from '../data';
 

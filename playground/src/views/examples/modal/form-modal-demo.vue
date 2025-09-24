@@ -3,7 +3,7 @@ import { useVbenModal } from '@vben/common-ui';
 
 import { message } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 defineOptions({
   name: 'FormModelDemo',

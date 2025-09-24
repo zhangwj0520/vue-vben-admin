@@ -5,7 +5,7 @@ import { Page } from '@vben/common-ui';
 
 import { Button, Card, Switch } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 defineOptions({
   name: 'ScrollToErrorTest',

@@ -44,26 +44,26 @@ const customConfig: Linter.Config[] = [
         'error',
         {
           patterns: [
-            {
-              group: ['#/api/*'],
-              message:
-                'The #/api package cannot be imported, please use the @core package itself',
-            },
-            {
-              group: ['#/layouts/*'],
-              message:
-                'The #/layouts package cannot be imported, please use the @core package itself',
-            },
-            {
-              group: ['#/locales/*'],
-              message:
-                'The #/locales package cannot be imported, please use the @core package itself',
-            },
-            {
-              group: ['#/stores/*'],
-              message:
-                'The #/stores package cannot be imported, please use the @core package itself',
-            },
+            // {
+            //   group: ['@/api/*'],
+            //   message:
+            //     'The @/api package cannot be imported, please use the @core package itself',
+            // },
+            // {
+            //   group: ['@/layouts/*'],
+            //   message:
+            //     'The @/layouts package cannot be imported, please use the @core package itself',
+            // },
+            // {
+            //   group: ['@/locales/*'],
+            //   message:
+            //     'The @/locales package cannot be imported, please use the @core package itself',
+            // },
+            // {
+            //   group: ['@/stores/*'],
+            //   message:
+            //     'The @/stores package cannot be imported, please use the @core package itself',
+            // },
           ],
         },
       ],

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import type { VxeGridProps } from '#/adapter/vxe-table';
+import type { VxeGridProps } from '@/adapter/vxe-table';
 
 import { Page } from '@vben/common-ui';
 
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
-import { getExampleTableApi } from '#/api';
+import { useVbenVxeGrid } from '@/adapter/vxe-table';
+import { getExampleTableApi } from '@/api';
 
 interface RowType {
   category: string;

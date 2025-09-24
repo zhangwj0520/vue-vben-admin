@@ -13,7 +13,7 @@ import { LoaderCircle, Square, SquareCheckBig } from '@vben/icons';
 
 import { Button, Card, message } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 const radioValue = ref<string | undefined>('a');
 const checkValue = ref(['a', 'b']);

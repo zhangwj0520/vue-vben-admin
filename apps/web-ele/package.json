@@ -22,9 +22,6 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit --skipLibCheck"
   },
-  "imports": {
-    "#/*": "./src/*"
-  },
   "dependencies": {
     "@vben/access": "workspace:*",
     "@vben/common-ui": "workspace:*",

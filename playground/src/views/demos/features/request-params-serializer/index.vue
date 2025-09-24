@@ -5,7 +5,7 @@ import { Page } from '@vben/common-ui';
 
 import { Card, Radio, RadioGroup } from 'ant-design-vue';
 
-import { getParamsData } from '#/api/examples/params';
+import { getParamsData } from '@/api/examples/params';
 
 const params = { ids: [2512, 3241, 4255] };
 const paramsSerializer = ref<'brackets' | 'comma' | 'indices' | 'repeat'>(

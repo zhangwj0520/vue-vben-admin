@@ -3,6 +3,7 @@ import type { CSSOptions, UserConfig } from 'vite';
 import type { DefineApplicationOptions } from '../typing';
 
 import path, { relative } from 'node:path';
+// removed unused imports
 
 import { findMonorepoRoot } from '@vben/node-utils';
 
@@ -77,6 +78,13 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
           : [],
         legalComments: 'none',
       },
+      resolve: {
+        alias: {
+          '@': path.resolve(root, 'src'),
+          '~': path.resolve(root, '.'),
+        },
+      },
+
       plugins,
       server: {
         host: true,
@@ -114,7 +122,7 @@ function createCssOptions(injectGlobalScss = true): CSSOptions {
               }
               return content;
             },
-            api: 'modern',
+            // 'api' removed: not part of SassPreprocessorOptions
             importers: [new NodePackageImporter()],
           },
         }

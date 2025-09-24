@@ -62,7 +62,7 @@ import type { RouteRecordRaw } from 'vue-router';
 
 import { VBEN_LOGO_URL } from '@vben/constants';
 
-import { $t } from '#/locales';
+import { $t } from '@/locales';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -80,7 +80,7 @@ const routes: RouteRecordRaw[] = [
       {
         name: 'VbenAbout',
         path: '/vben-admin/about',
-        component: () => import('#/views/_core/about/index.vue'),
+        component: () => import('@/views/_core/about/index.vue'),
         meta: {
           badgeType: 'dot',
           badgeVariants: 'destructive',
@@ -110,7 +110,7 @@ export default routes;
 ```ts
 import type { RouteRecordRaw } from 'vue-router';
 
-import { $t } from '#/locales';
+import { $t } from '@/locales';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -137,7 +137,7 @@ const routes: RouteRecordRaw[] = [
           {
             name: 'Menu1Demo',
             path: '/demos/nested/menu1',
-            component: () => import('#/views/demos/nested/menu-1.vue'),
+            component: () => import('@/views/demos/nested/menu-1.vue'),
             meta: {
               icon: 'ic:round-menu',
               keepAlive: true,
@@ -157,7 +157,7 @@ const routes: RouteRecordRaw[] = [
               {
                 name: 'Menu21Demo',
                 path: '/demos/nested/menu2/menu2-1',
-                component: () => import('#/views/demos/nested/menu-2-1.vue'),
+                component: () => import('@/views/demos/nested/menu-2-1.vue'),
                 meta: {
                   icon: 'ic:round-menu',
                   keepAlive: true,
@@ -178,7 +178,7 @@ const routes: RouteRecordRaw[] = [
               {
                 name: 'Menu31Demo',
                 path: 'menu3-1',
-                component: () => import('#/views/demos/nested/menu-3-1.vue'),
+                component: () => import('@/views/demos/nested/menu-3-1.vue'),
                 meta: {
                   icon: 'ic:round-menu',
                   keepAlive: true,
@@ -198,7 +198,7 @@ const routes: RouteRecordRaw[] = [
                     name: 'Menu321Demo',
                     path: '/demos/nested/menu3/menu3-2/menu3-2-1',
                     component: () =>
-                      import('#/views/demos/nested/menu-3-2-1.vue'),
+                      import('@/views/demos/nested/menu-3-2-1.vue'),
                     meta: {
                       icon: 'ic:round-menu',
                       keepAlive: true,
@@ -233,7 +233,7 @@ import type { RouteRecordRaw } from 'vue-router';
 
 import { VBEN_LOGO_URL } from '@vben/constants';
 
-import { $t } from '#/locales';
+import { $t } from '@/locales';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -248,7 +248,7 @@ const routes: RouteRecordRaw[] = [
       {
         name: 'HomeIndex',
         path: '/home/index',
-        component: () => import('#/views/home/index.vue'),
+        component: () => import('@/views/home/index.vue'),
         meta: {
           icon: 'mdi:home',
           title: $t('page.home.index'),
@@ -263,7 +263,7 @@ export default routes;
 
 ### 添加页面组件
 
-在`#/views/home/`下，新增一个`index.vue`文件，如下：
+在`@/views/home/`下，新增一个`index.vue`文件，如下：
 
 ```vue
 <template>

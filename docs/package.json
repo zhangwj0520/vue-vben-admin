@@ -8,7 +8,7 @@
     "docs:preview": "vitepress preview"
   },
   "imports": {
-    "#/*": {
+    "@/*": {
       "node": "./src/_env/node/*",
       "default": "./src/_env/*"
     }

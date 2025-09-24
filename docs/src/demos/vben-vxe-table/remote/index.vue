@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import type { DemoTableApi } from '../mock-api';
 
-import type { VxeGridProps } from '#/adapter/vxe-table';
+import type { VxeGridProps } from '@/adapter/vxe-table';
 
 import { Button } from 'ant-design-vue';
 
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
+import { useVbenVxeGrid } from '@/adapter/vxe-table';
 
 import { MOCK_API_DATA } from '../table-data';
 

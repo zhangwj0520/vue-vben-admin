@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { message } from 'ant-design-vue';
 
-import { useVbenForm, z } from '#/adapter/form';
+import { useVbenForm, z } from '@/adapter/form';
 
 const [Form] = useVbenForm({
   // 所有表单项共用，可单独在表单内覆盖
@@ -19,7 +19,7 @@ const [Form] = useVbenForm({
   layout: 'horizontal',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {

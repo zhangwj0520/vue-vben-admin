@@ -55,7 +55,7 @@ export async function perfectionist(): Promise<Linter.Config[]> {
               'object',
               'unknown',
             ],
-            internalPattern: ['^#/.+'],
+            internalPattern: ['^@/.+'],
             newlinesBetween: 'always',
             order: 'asc',
             type: 'natural',

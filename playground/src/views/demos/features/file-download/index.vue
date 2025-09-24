@@ -11,7 +11,7 @@ import {
 
 import { Button, Card } from 'ant-design-vue';
 
-import { downloadFile1, downloadFile2 } from '#/api/examples/download';
+import { downloadFile1, downloadFile2 } from '@/api/examples/download';
 
 import imageBase64 from './base64';
 

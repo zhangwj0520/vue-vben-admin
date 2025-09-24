@@ -7,7 +7,7 @@ import { Page, Tippy } from '@vben/common-ui';
 
 import { Button, Card, Flex } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 const tippyProps = reactive<TippyProps>({
   animation: 'shift-away',

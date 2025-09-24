@@ -3,7 +3,7 @@ import { Page } from '@vben/common-ui';
 
 import { Card, message } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 const [QueryForm] = useVbenForm({
   // 默认展开
@@ -22,7 +22,7 @@ const [QueryForm] = useVbenForm({
   layout: 'horizontal',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {
@@ -90,7 +90,7 @@ const [InlineForm] = useVbenForm({
   layout: 'inline',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {
@@ -162,7 +162,7 @@ const [QueryForm1] = useVbenForm({
     const schema = [];
     for (let index = 0; index < 14; index++) {
       schema.push({
-        // 组件需要在 #/adapter.ts内注册，并加上类型
+        // 组件需要在 @/adapter.ts内注册，并加上类型
         component: 'Input',
         // 字段名
         fieldName: `field${index}`,
@@ -202,7 +202,7 @@ const [QueryForm2] = useVbenForm({
   layout: 'vertical',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Button, message, Space } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 const [BaseForm, formApi] = useVbenForm({
   // 所有表单项共用，可单独在表单内覆盖
@@ -19,7 +19,7 @@ const [BaseForm, formApi] = useVbenForm({
   // 水平布局，label和input在同一行
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {

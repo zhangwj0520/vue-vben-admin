@@ -9,10 +9,10 @@ import { useDebounceFn } from '@vueuse/core';
 import { Button, Card, message, Spin, Tag } from 'ant-design-vue';
 import dayjs from 'dayjs';
 
-import { useVbenForm, z } from '#/adapter/form';
-import { getAllMenusApi } from '#/api';
-import { upload_file } from '#/api/examples/upload';
-import { $t } from '#/locales';
+import { useVbenForm, z } from '@/adapter/form';
+import { getAllMenusApi } from '@/api';
+import { upload_file } from '@/api/examples/upload';
+import { $t } from '@/locales';
 
 import DocButton from '../doc-button.vue';
 
@@ -55,7 +55,7 @@ const [BaseForm, baseFormApi] = useVbenForm({
   layout: 'horizontal',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {
@@ -68,7 +68,7 @@ const [BaseForm, baseFormApi] = useVbenForm({
       rules: 'required',
     },
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'ApiSelect',
       // 对应组件的参数
       componentProps: {

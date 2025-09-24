@@ -9,7 +9,7 @@ import { resetAllStores, useUserStore } from '@vben/stores';
 
 import { Button, Card } from 'ant-design-vue';
 
-import { useAuthStore } from '#/store';
+import { useAuthStore } from '@/store';
 
 const accounts: Record<string, Recordable<any>> = {
   admin: {

@@ -44,12 +44,12 @@ import { isString } from '@vben/utils';
 
 ## Aliases
 
-In the project, you can see some paths starting with `#`, such as `#/api`, `#/views`. These paths are aliases, used for quickly locating a certain directory. They are not implemented through `vite`'s `alias`, but through the principle of [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) in `Node.js` itself. You only need to configure the `imports` field in `package.json`.
+In the project, you can see some paths starting with `#`, such as `@/api`, `@/views`. These paths are aliases, used for quickly locating a certain directory. They are not implemented through `vite`'s `alias`, but through the principle of [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) in `Node.js` itself. You only need to configure the `imports` field in `package.json`.
 
 ```json {3}
 {
   "imports": {
-    "#/*": "./src/*"
+    "@/*": "./src/*"
   }
 }
 ```
@@ -61,7 +61,7 @@ To make these aliases recognizable by the IDE, we also need to configure them in
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["src/*"]
+      "@/*": ["src/*"]
     }
   }
 }

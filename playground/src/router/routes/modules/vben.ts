@@ -10,8 +10,8 @@ import {
 } from '@vben/constants';
 import { SvgAntdvLogoIcon } from '@vben/icons';
 
-import { IFrameView } from '#/layouts';
-import { $t } from '#/locales';
+import { IFrameView } from '@/layouts';
+import { $t } from '@/locales';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -80,7 +80,7 @@ const routes: RouteRecordRaw[] = [
     ],
   },
   {
-    component: () => import('#/views/_core/about/index.vue'),
+    component: () => import('@/views/_core/about/index.vue'),
     meta: {
       icon: 'lucide:copyright',
       order: 9999,

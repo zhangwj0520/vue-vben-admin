@@ -17,7 +17,7 @@ import { cloneDeep } from '@vben/utils';
 import { message } from 'ant-design-vue';
 import JSONBigInt from 'json-bigint';
 
-import { useAuthStore } from '#/store';
+import { useAuthStore } from '@/store';
 
 import { refreshTokenApi } from './core';
 

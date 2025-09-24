@@ -16,7 +16,7 @@ import { get, isFunction, isString } from '@vben/utils';
 import { objectOmit } from '@vueuse/core';
 import { Button, Image, Popconfirm, Switch, Tag } from 'ant-design-vue';
 
-import { $t } from '#/locales';
+import { $t } from '@/locales';
 
 import { useVbenForm } from './form';
 

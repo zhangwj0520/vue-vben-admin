@@ -9,7 +9,7 @@ import { MenuBadge } from '@vben-core/menu-ui';
 
 import { Button, Card, Radio, RadioGroup } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 const colors = [
   { label: '预设：默认', value: 'default' },

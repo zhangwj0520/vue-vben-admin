@@ -4,7 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["./src/_env/*"]
+      "@/*": ["./src/_env/*"]
     }
   },
   "include": [

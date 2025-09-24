@@ -3,7 +3,7 @@ import { Page } from '@vben/common-ui';
 
 import { Button, Card, message } from 'ant-design-vue';
 
-import { useVbenForm, z } from '#/adapter/form';
+import { useVbenForm, z } from '@/adapter/form';
 
 const [Form, formApi] = useVbenForm({
   // 所有表单项共用，可单独在表单内覆盖
@@ -20,7 +20,7 @@ const [Form, formApi] = useVbenForm({
   layout: 'horizontal',
   schema: [
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
       componentProps: {

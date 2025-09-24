@@ -7,7 +7,7 @@ import { Page, PointSelectionCaptcha } from '@vben/common-ui';
 
 import { Card, Input, InputNumber, message, Switch } from 'ant-design-vue';
 
-import { $t } from '#/locales';
+import { $t } from '@/locales';
 
 const DEFAULT_CAPTCHA_IMAGE =
   'https://unpkg.com/@vbenjs/static-source@0.1.7/source/default-captcha-image.jpeg';

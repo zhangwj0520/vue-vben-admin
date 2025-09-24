@@ -9,8 +9,8 @@ import '@vben/styles/antd';
 
 import { useTitle } from '@vueuse/core';
 
-import { $t, setupI18n } from '#/locales';
-import { router } from '#/router';
+import { $t, setupI18n } from '@/locales';
+import { router } from '@/router';
 
 import { initComponentAdapter } from './adapter/component';
 import { initSetupVbenForm } from './adapter/form';

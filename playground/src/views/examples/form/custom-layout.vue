@@ -5,7 +5,7 @@ import { Page } from '@vben/common-ui';
 
 import { Card } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useVbenForm } from '@/adapter/form';
 
 import DocButton from '../doc-button.vue';
 

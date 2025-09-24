@@ -3,10 +3,7 @@ import { ref } from 'vue';
 
 import { Page } from '@vben/common-ui';
 
-import {
-  ElMessage,
-  ElNotification,
-} from 'element-plus';
+import { ElMessage, ElNotification } from 'element-plus';
 
 type NotificationType = 'error' | 'info' | 'success' | 'warning';
 

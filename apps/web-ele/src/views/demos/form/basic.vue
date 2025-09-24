@@ -5,8 +5,8 @@ import { Page, useVbenDrawer } from '@vben/common-ui';
 
 import { ElButton, ElCard, ElCheckbox, ElMessage } from 'element-plus';
 
-import { useVbenForm } from '#/adapter/form';
-import { getAllMenusApi } from '#/api';
+import { useVbenForm } from '@/adapter/form';
+import { getAllMenusApi } from '@/api';
 
 const [Form, formApi] = useVbenForm({
   commonConfig: {
@@ -28,7 +28,7 @@ const [Form, formApi] = useVbenForm({
       label: 'IconPicker',
     },
     {
-      // 组件需要在 #/adapter.ts内注册，并加上类型
+      // 组件需要在 @/adapter.ts内注册，并加上类型
       component: 'ApiSelect',
       // 对应组件的参数
       componentProps: {

@@ -115,7 +115,7 @@ The project comes with a default basic request configuration based on `axios`, p
 #### GET Request
 
 ```ts
-import { requestClient } from '#/api/request';
+import { requestClient } from '@/api/request';
 
 export async function getUserInfoApi() {
   return requestClient.get<UserInfo>('/user/info');
@@ -125,7 +125,7 @@ export async function getUserInfoApi() {
 #### POST/PUT Request
 
 ```ts
-import { requestClient } from '#/api/request';
+import { requestClient } from '@/api/request';
 
 export async function saveUserApi(user: UserInfo) {
   return requestClient.post<UserInfo>('/user', user);
@@ -148,7 +148,7 @@ export async function saveUserApi(user: UserInfo) {
 #### DELETE Request
 
 ```ts
-import { requestClient } from '#/api/request';
+import { requestClient } from '@/api/request';
 
 export async function deleteUserApi(userId: number) {
   return requestClient.delete<boolean>(`/user/${userId}`);
@@ -176,7 +176,7 @@ import { useAccessStore } from '@vben/stores';
 
 import { message } from 'ant-design-vue';
 
-import { useAuthStore } from '#/store';
+import { useAuthStore } from '@/store';
 
 import { refreshTokenApi } from './core';
 
