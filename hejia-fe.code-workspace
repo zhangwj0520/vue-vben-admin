@@ -1,0 +1,164 @@
+{
+  "folders": [
+    {
+      "name": "@hj-fe/backend-mock",
+      "path": "apps/backend-mock",
+    },
+    {
+      "name": "@hj-fe/web-ele",
+      "path": "apps/web-ele",
+    },
+    {
+      "name": "@hj-fe/docs",
+      "path": "docs",
+    },
+    {
+      "name": "@hj-fe/commitlint-config",
+      "path": "internal/lint-configs/commitlint-config",
+    },
+    {
+      "name": "@hj-fe/eslint-config",
+      "path": "internal/lint-configs/eslint-config",
+    },
+    {
+      "name": "@hj-fe/prettier-config",
+      "path": "internal/lint-configs/prettier-config",
+    },
+    {
+      "name": "@hj-fe/stylelint-config",
+      "path": "internal/lint-configs/stylelint-config",
+    },
+    {
+      "name": "@hj-fe/node-utils",
+      "path": "internal/node-utils",
+    },
+    {
+      "name": "@hj-fe/tailwind-config",
+      "path": "internal/tailwind-config",
+    },
+    {
+      "name": "@hj-fe/tsconfig",
+      "path": "internal/tsconfig",
+    },
+    {
+      "name": "@hj-fe/vite-config",
+      "path": "internal/vite-config",
+    },
+    {
+      "name": "@hj-fe-core/design",
+      "path": "packages/@core/base/design",
+    },
+    {
+      "name": "@hj-fe-core/icons",
+      "path": "packages/@core/base/icons",
+    },
+    {
+      "name": "@hj-fe-core/shared",
+      "path": "packages/@core/base/shared",
+    },
+    {
+      "name": "@hj-fe-core/typings",
+      "path": "packages/@core/base/typings",
+    },
+    {
+      "name": "@hj-fe-core/composables",
+      "path": "packages/@core/composables",
+    },
+    {
+      "name": "@hj-fe-core/preferences",
+      "path": "packages/@core/preferences",
+    },
+    {
+      "name": "@hj-fe-core/form-ui",
+      "path": "packages/@core/ui-kit/form-ui",
+    },
+    {
+      "name": "@hj-fe-core/layout-ui",
+      "path": "packages/@core/ui-kit/layout-ui",
+    },
+    {
+      "name": "@hj-fe-core/menu-ui",
+      "path": "packages/@core/ui-kit/menu-ui",
+    },
+    {
+      "name": "@hj-fe-core/popup-ui",
+      "path": "packages/@core/ui-kit/popup-ui",
+    },
+    {
+      "name": "@hj-fe-core/shadcn-ui",
+      "path": "packages/@core/ui-kit/shadcn-ui",
+    },
+    {
+      "name": "@hj-fe-core/tabs-ui",
+      "path": "packages/@core/ui-kit/tabs-ui",
+    },
+    {
+      "name": "@hj-fe/constants",
+      "path": "packages/constants",
+    },
+    {
+      "name": "@hj-fe/access",
+      "path": "packages/effects/access",
+    },
+    {
+      "name": "@hj-fe/common-ui",
+      "path": "packages/effects/common-ui",
+    },
+    {
+      "name": "@hj-fe/hooks",
+      "path": "packages/effects/hooks",
+    },
+    {
+      "name": "@hj-fe/layouts",
+      "path": "packages/effects/layouts",
+    },
+    {
+      "name": "@hj-fe/plugins",
+      "path": "packages/effects/plugins",
+    },
+    {
+      "name": "@hj-fe/request",
+      "path": "packages/effects/request",
+    },
+    {
+      "name": "@hj-fe/icons",
+      "path": "packages/icons",
+    },
+    {
+      "name": "@hj-fe/locales",
+      "path": "packages/locales",
+    },
+    {
+      "name": "@hj-fe/preferences",
+      "path": "packages/preferences",
+    },
+    {
+      "name": "@hj-fe/stores",
+      "path": "packages/stores",
+    },
+    {
+      "name": "@hj-fe/styles",
+      "path": "packages/styles",
+    },
+    {
+      "name": "@hj-fe/types",
+      "path": "packages/types",
+    },
+    {
+      "name": "@hj-fe/utils",
+      "path": "packages/utils",
+    },
+    {
+      "name": "@hj-fe/playground",
+      "path": "playground",
+    },
+    {
+      "name": "@hj-fe/turbo-run",
+      "path": "scripts/turbo-run",
+    },
+    {
+      "name": "@hj-fe/vsh",
+      "path": "scripts/vsh",
+    },
+  ],
+}

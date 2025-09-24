@@ -29,7 +29,6 @@
     "@/*": "./src/*"
   },
   "dependencies": {
-    "@tanstack/vue-query": "catalog:",
     "@hj-fe-core/menu-ui": "workspace:*",
     "@hj-fe/access": "workspace:*",
     "@hj-fe/common-ui": "workspace:*",
@@ -45,6 +44,7 @@
     "@hj-fe/styles": "workspace:*",
     "@hj-fe/types": "workspace:*",
     "@hj-fe/utils": "workspace:*",
+    "@tanstack/vue-query": "catalog:",
     "@vueuse/core": "catalog:",
     "ant-design-vue": "catalog:",
     "dayjs": "catalog:",

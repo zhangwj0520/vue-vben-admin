@@ -61,8 +61,6 @@
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",
     "@changesets/cli": "catalog:",
-    "@playwright/test": "catalog:",
-    "@types/node": "catalog:",
     "@hj-fe/commitlint-config": "workspace:*",
     "@hj-fe/eslint-config": "workspace:*",
     "@hj-fe/prettier-config": "workspace:*",
@@ -72,6 +70,8 @@
     "@hj-fe/turbo-run": "workspace:*",
     "@hj-fe/vite-config": "workspace:*",
     "@hj-fe/vsh": "workspace:*",
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/test-utils": "catalog:",
@@ -96,7 +96,7 @@
     "node": ">=20.10.0",
     "pnpm": ">=9.12.0"
   },
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.17.1",
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {

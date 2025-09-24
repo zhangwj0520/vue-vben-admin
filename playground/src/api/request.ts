@@ -1,7 +1,10 @@
 /**
  * 该文件可自行根据业务逻辑进行调整
  */
-import type { AxiosResponseHeaders, RequestClientOptions } from '@hj-fe/request';
+import type {
+  AxiosResponseHeaders,
+  RequestClientOptions,
+} from '@hj-fe/request';
 
 import { useAppConfig } from '@hj-fe/hooks';
 import { preferences } from '@hj-fe/preferences';
