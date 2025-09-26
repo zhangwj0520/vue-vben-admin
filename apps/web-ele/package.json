@@ -37,6 +37,7 @@
     "@hj-fe/styles": "workspace:*",
     "@hj-fe/types": "workspace:*",
     "@hj-fe/utils": "workspace:*",
+    "@hj-meta2d/core": "workspace:*",
     "@vueuse/core": "catalog:",
     "dayjs": "catalog:",
     "element-plus": "catalog:",

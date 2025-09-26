@@ -1,0 +1,53 @@
+{
+  "name": "@hj-meta2d/core",
+  "version": "1.0.84",
+  "description": "@hj-meta2d/core: Powerful, Beautiful, Simple, Open - Web-Based 2D At Its Best .",
+  "keywords": [
+    "meta2d",
+    "diagram",
+    "2D",
+    "canvas"
+  ],
+  "homepage": "https://github.com/le5le-com/meta2d.js#readme",
+  "bugs": {
+    "url": "https://github.com/le5le-com/meta2d.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/le5le-com/meta2d.js.git"
+  },
+  "license": "MIT",
+  "author": "alsmile123@qq.com",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm unbuild",
+    "stub": "pnpm unbuild --stub"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./diagrams": {
+      "types": "./src/diagrams/index.ts",
+      "development": "./src/diagrams/index.ts",
+      "default": "./dist/diagrams/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "mitt": "^2.1.0",
+    "mqtt": "^4.2.6"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.3",
+    "@types/offscreencanvas": "latest",
+    "@types/zrender": "^4.0.0"
+  },
+  "gitHead": "78f2a53ca1839c89b56e2e498d17ba4eb987ad14"
+}
