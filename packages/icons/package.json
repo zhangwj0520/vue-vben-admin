@@ -17,6 +17,7 @@
     }
   },
   "dependencies": {
-    "@hj-fe-core/icons": "workspace:*"
+    "@hj-fe-core/icons": "workspace:*",
+    "@hj-fe-core/shadcn-ui": "workspace:*"
   }
 }

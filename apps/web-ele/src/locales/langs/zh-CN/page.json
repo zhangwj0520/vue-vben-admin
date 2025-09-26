@@ -10,5 +10,10 @@
     "title": "概览",
     "analytics": "分析页",
     "workspace": "工作台"
+  },
+  "configure": {
+    "editor": "组态编辑器",
+    "name": "组态",
+    "preview": "组态预览"
   }
 }

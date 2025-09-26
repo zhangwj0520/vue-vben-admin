@@ -238,5 +238,14 @@
     "rollup",
     "vitest"
   ],
-  "commentTranslate.targetLanguage": "zh-CN"
+
+  "iconify.customCollectionJsonPaths": [
+    "./packages/icons/src/iconset/custom.json",
+    "./packages/icons/src/iconset/system.json"
+  ],
+  "commentTranslate.targetLanguage": "zh-CN",
+  "i18next.i18nPaths": "e:/work/vue-vben-admin/packages/locales,e:/work/vue-vben-admin/playground/src/locales,e:/work/vue-vben-admin/apps/web-ele/src/locales,e:/work/vue-vben-admin/packages/locales/src/langs,e:/work/vue-vben-admin/playground/src/locales/langs,e:/work/vue-vben-admin/apps/web-ele/src/locales/langs",
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }

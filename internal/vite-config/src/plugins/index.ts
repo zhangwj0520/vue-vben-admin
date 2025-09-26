@@ -18,6 +18,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import viteVueDevTools from 'vite-plugin-vue-devtools';
 
 import { viteArchiverPlugin } from './archiver';
+import addIconSetPlugin from './dynamic-icon';
 import { viteExtraAppConfigPlugin } from './extra-app-config';
 import { viteImportMapPlugin } from './importmap';
 import { viteInjectAppLoadingPlugin } from './inject-app-loading';
@@ -25,8 +26,8 @@ import { viteMetadataPlugin } from './inject-metadata';
 import { viteLicensePlugin } from './license';
 import { viteNitroMockPlugin } from './nitro-mock';
 import { vitePrintPlugin } from './print';
+import unplugin from './unplugin';
 import { viteVxeTableImportsPlugin } from './vxe-table';
-
 /**
  * 获取条件成立的 vite 插件
  * @param conditionPlugins
@@ -118,6 +119,25 @@ async function loadApplicationPlugins(
 
   return await loadConditionPlugins([
     ...commonPlugins,
+    {
+      condition: true,
+      plugins: () => unplugin(),
+    },
+    {
+      condition: true,
+      plugins: () => [
+        addIconSetPlugin([
+          {
+            path: `${process.cwd()}/src/assets/system`,
+            prefix: 'system',
+          },
+          {
+            path: `${process.cwd()}/src/assets/custom`,
+            prefix: 'custom',
+          },
+        ]),
+      ],
+    },
     {
       condition: i18n,
       plugins: async () => {
