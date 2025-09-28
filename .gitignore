@@ -50,3 +50,6 @@ vite.config.ts.*
 *.sw?
 .history
 .cursor
+packages/icons/src/iconset/system.json
+packages/icons/src/iconset/custom.json
+packages/icons/src/iconset/custom.json
