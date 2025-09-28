@@ -38,16 +38,10 @@ import { HjIcon } from '@hj-fe/icons';
       </template>
       <span class="icon-[custom--logo] text-8xl"></span>
       <span class="icon-[system--download] text-8xl"></span>
+      <span class="icon-[custom--play] text-8xl"></span>
+      <span class="icon-[custom--demos-play] text-8xl"></span>
     </el-card>
-    <el-card>
-      <template #header>
-        <div class="card-header">
-          <span>组件方式 icon-XXX-XX(assets/custom目录下的svg文件)"</span>
-        </div>
-      </template>
-      <icon-custom-logo class="text-8xl" />
-      <icon-system-download class="text-8xl" />
-    </el-card>
+
     <el-card>
       <template #header>
         <div class="card-header">
@@ -55,8 +49,12 @@ import { HjIcon } from '@hj-fe/icons';
         </div>
       </template>
       <HjIcon class="text-8xl" icon="custom:logo" />
+      <HjIcon class="text-8xl" icon="system:download" />
       <div>11</div>
       <HjIcon icon="svg:avatar-1" class="text-8xl" />
+      <HjIcon icon="custom:play" class="text-8xl" />
+      <HjIcon icon="custom--play" class="text-8xl" />
+      <HjIcon icon="custom--demos-play" class="text-8xl" />
     </el-card>
   </Page>
 </template>
