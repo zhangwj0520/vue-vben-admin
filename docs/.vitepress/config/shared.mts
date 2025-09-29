@@ -6,7 +6,7 @@ import { resolve } from 'node:path';
 import {
   viteArchiverPlugin,
   viteVxeTableImportsPlugin,
-} from '@vben/vite-config';
+} from '@hj-fe/vite-config';
 
 import {
   GitChangelog,
@@ -44,12 +44,9 @@ export const shared = defineConfig({
       },
       provider: 'local',
     },
-    siteTitle: 'Vben Admin',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vbenjs/vue-vben-admin' },
-    ],
+    siteTitle: '和嘉前端',
   },
-  title: 'Vben Admin',
+  title: '和嘉前端',
   vite: {
     build: {
       chunkSizeWarningLimit: Infinity,
@@ -75,17 +72,12 @@ export const shared = defineConfig({
       GitChangelog({
         mapAuthors: [
           {
-            mapByNameAliases: ['Vben'],
-            name: 'vben',
-            username: 'anncwb',
+            name: '张为杰',
+            username: 'zhangweijie',
           },
           {
-            name: 'vince',
-            username: 'vince292007',
-          },
-          {
-            name: 'Li Kui',
-            username: 'likui628',
+            name: '安鹏伟',
+            username: 'anpengwei',
           },
         ],
         repoURL: () => 'https://github.com/vbenjs/vue-vben-admin',
@@ -111,7 +103,7 @@ export const shared = defineConfig({
 
 function head(): HeadConfig[] {
   return [
-    ['meta', { content: 'Vbenjs Team', name: 'author' }],
+    ['meta', { content: '和嘉前端', name: 'author' }],
     [
       'meta',
       {
@@ -128,7 +120,7 @@ function head(): HeadConfig[] {
         name: 'viewport',
       },
     ],
-    ['meta', { content: 'vben admin docs', name: 'keywords' }],
+    ['meta', { content: '和嘉管理后台', name: 'keywords' }],
     ['link', { href: '/favicon.ico', rel: 'icon' }],
     // [
     //   'script',

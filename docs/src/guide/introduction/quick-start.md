@@ -22,27 +22,6 @@ node -v
 git -v
 ```
 
-:::
-
-## 启动项目
-
-### 获取源码
-
-::: code-group
-
-```sh [GitHub]
-# clone 代码
-git clone https://github.com/vbenjs/vue-vben-admin.git
-```
-
-```sh [Gitee]
-# clone 代码
-# Gitee 的代码可能不是最新的
-git clone https://gitee.com/annsion/vue-vben-admin.git
-```
-
-:::
-
 ::: danger 注意
 
 注意存放代码的目录及所有父级目录不能存在中文、韩文、日文以及空格，否则安装依赖后启动会出错。

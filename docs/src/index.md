@@ -4,8 +4,8 @@ layout: home
 sidebar: false
 
 hero:
-  name: Vben Admin
-  text: 企业级管理系统框架
+  name: HJ-Admin
+  text: 系统框架
   tagline: 全新升级，开箱即用，简单高效
   image:
     src: https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp
@@ -107,5 +107,3 @@ const members = [
     :members="members"
   />
 </VPTeamPage> -->
-
-<VbenContributors />

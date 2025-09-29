@@ -2,8 +2,6 @@ import type { DefaultTheme } from 'vitepress';
 
 import { defineConfig } from 'vitepress';
 
-import { version } from '../../../package.json';
-
 export const zh = defineConfig({
   description: 'Vben Admin & 企业级管理系统框架',
   lang: 'zh-Hans',
@@ -20,7 +18,7 @@ export const zh = defineConfig({
       text: '在 GitHub 上编辑此页面',
     },
     footer: {
-      copyright: `Copyright © 2020-${new Date().getFullYear()} Vben`,
+      copyright: `Copyright © 2025-${new Date().getFullYear()} HJ-Frontend`,
       message: '基于 MIT 许可发布.',
     },
     langMenuLabel: '多语言',
@@ -40,7 +38,7 @@ export const zh = defineConfig({
     returnToTopLabel: '回到顶部',
 
     sidebar: {
-      '/commercial/': { base: '/commercial/', items: sidebarCommercial() },
+      // '/commercial/': { base: '/commercial/', items: sidebarCommercial() },
       '/components/': { base: '/components/', items: sidebarComponents() },
       '/guide/': { base: '/guide/', items: sidebarGuide() },
     },
@@ -56,14 +54,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         {
           link: 'introduction/vben',
-          text: '关于 Vben Admin',
-        },
-        {
-          link: 'introduction/why',
-          text: '为什么选择我们?',
+          text: '关于 HJ Admin',
         },
         { link: 'introduction/quick-start', text: '快速开始' },
-        { link: 'introduction/thin', text: '精简版本' },
         {
           base: '/',
           link: 'components/introduction',
@@ -122,23 +115,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-function sidebarCommercial(): DefaultTheme.SidebarItem[] {
-  return [
-    {
-      link: 'community',
-      text: '交流群',
-    },
-    {
-      link: 'technical-support',
-      text: '技术支持',
-    },
-    {
-      link: 'customized',
-      text: '定制开发',
-    },
-  ];
-}
-
 function sidebarComponents(): DefaultTheme.SidebarItem[] {
   return [
     {
@@ -164,6 +140,10 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       text: '通用组件',
       items: [
+        {
+          link: 'common-ui/hj-icon',
+          text: 'icon组件',
+        },
         {
           link: 'common-ui/vben-api-component',
           text: 'ApiComponent Api组件包装器',
@@ -204,111 +184,49 @@ function sidebarComponents(): DefaultTheme.SidebarItem[] {
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      activeMatch: '^/(guide|components)/',
-      text: '文档',
-      items: [
-        {
-          activeMatch: '^/guide/',
-          link: '/guide/introduction/vben',
-          text: '指南',
-        },
-        {
-          activeMatch: '^/components/',
-          link: '/components/introduction',
-          text: '组件',
-        },
-        {
-          text: '历史版本',
-          items: [
-            {
-              link: 'https://doc.vvbin.cn',
-              text: '2.x版本文档',
-            },
-          ],
-        },
-      ],
+      activeMatch: '^/guide/',
+      link: '/guide/introduction/vben',
+      text: '指南',
     },
     {
-      text: '演示',
-      items: [
-        {
-          text: 'Vben Admin',
-          items: [
-            {
-              link: 'https://www.vben.pro',
-              text: '演示版本',
-            },
-            {
-              link: 'https://ant.vben.pro',
-              text: 'Ant Design Vue 版本',
-            },
-            {
-              link: 'https://naive.vben.pro',
-              text: 'Naive 版本',
-            },
-            {
-              link: 'https://ele.vben.pro',
-              text: 'Element Plus版本',
-            },
-          ],
-        },
-        {
-          text: '其他',
-          items: [
-            {
-              link: 'https://vben.vvbin.cn',
-              text: 'Vben Admin 2.x',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      text: version,
-      items: [
-        {
-          link: 'https://github.com/vbenjs/vue-vben-admin/releases',
-          text: '更新日志',
-        },
-        {
-          link: 'https://github.com/orgs/vbenjs/projects/5',
-          text: '路线图',
-        },
-        {
-          link: 'https://github.com/vbenjs/vue-vben-admin/blob/main/.github/contributing.md',
-          text: '贡献',
-        },
-      ],
-    },
-    {
-      link: '/commercial/technical-support',
-      text: '🦄 技术支持',
-    },
-    {
-      link: '/sponsor/personal',
-      text: '✨ 赞助',
-    },
-    {
-      link: '/commercial/community',
-      text: '👨‍👦‍👦 交流群',
-      // items: [
-      //   {
-      //     link: 'https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=22ySzj7pKiw&businessType=9&from=246610&biz=ka&mainSourceId=share&subSourceId=others&jumpsource=shorturl#/pc',
-      //     text: 'QQ频道',
-      //   },
-      //   {
-      //     link: 'https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=mjZmlhgVzzUxvdxllB6C1vHpX8O8QRL0&authKey=DBdFbBwERmfaKY95JvRWqLCJIRGJAmKyZbrpzZ41EKDMZ5SR6MfbjOBaaNRN73fr&noverify=0&group_code=4286109',
-      //     text: 'QQ群',
-      //   },
-      //   {
-      //     link: 'https://discord.gg/VU62jTecad',
-      //     text: 'Discord',
-      //   },
-      // ],
+      activeMatch: '^/components/',
+      link: '/components/introduction',
+      text: '组件',
     },
     // {
-    //   link: '/friend-links/',
-    //   text: '🤝 友情链接',
+    //   text: '演示',
+    //   items: [
+    //     {
+    //       text: 'Vben Admin',
+    //       items: [
+    //         {
+    //           link: 'https://www.vben.pro',
+    //           text: '演示版本',
+    //         },
+    //         {
+    //           link: 'https://ant.vben.pro',
+    //           text: 'Ant Design Vue 版本',
+    //         },
+    //         {
+    //           link: 'https://naive.vben.pro',
+    //           text: 'Naive 版本',
+    //         },
+    //         {
+    //           link: 'https://ele.vben.pro',
+    //           text: 'Element Plus版本',
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       text: '其他',
+    //       items: [
+    //         {
+    //           link: 'https://vben.vvbin.cn',
+    //           text: 'Vben Admin 2.x',
+    //         },
+    //       ],
+    //     },
+    //   ],
     // },
   ];
 }

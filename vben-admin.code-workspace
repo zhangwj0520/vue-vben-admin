@@ -45,6 +45,10 @@
       "path": "internal/vite-config",
     },
     {
+      "name": "@hj-meta2d/core",
+      "path": "packages-meta2d/core",
+    },
+    {
       "name": "@hj-fe-core/design",
       "path": "packages/@core/base/design",
     },
