@@ -42,7 +42,7 @@ import { HjIcon } from '@hj-fe/icons';
 <span class="icon-[custom--play] text-8xl"></span>
 ```
 
-::: tip  svg单文件组件组件方式
+::: tip svg单文件组件组件方式
 
 - 支持将svg放在 `apps/xxx/src/assets/` 目录下的文件，直接转换成组件。
 - 因方式不支持文件子路径，目前已经注释该方式，后续有需要再调整vite配置
