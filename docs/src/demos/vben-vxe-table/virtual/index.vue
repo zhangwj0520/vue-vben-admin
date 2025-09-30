@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import type { VxeGridProps } from '@/adapter/vxe-table';
+import type { VxeGridProps } from '../../../_env/adapter/vxe-table';
 
 import { onMounted } from 'vue';
 
-import { useVbenVxeGrid } from '@/adapter/vxe-table';
+import { useVbenVxeGrid } from '../../../_env/adapter/vxe-table';
 
 interface RowType {
   id: number;

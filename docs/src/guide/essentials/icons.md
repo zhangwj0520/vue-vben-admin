@@ -9,70 +9,42 @@
 
 项目中有以下多种图标使用方式，可以根据实际情况选择使用：
 
-## Iconify 图标 <Badge text="推荐" type="tip"/>
+## 图标来源
 
-集成了 [iconify](https://github.com/iconify/iconify) 图标库
+### 1. Iconify 图标
 
-### 新增
+集成了 [iconify](https://github.com/iconify/iconify) 图标库，自动导入
 
-可在 `packages/icons/src/iconify` 目录下新增图标：
+### 2. Svg文件 图标
 
-```ts
-// packages/icons/src/iconify/index.ts
-import { createIconifyIcon } from '@hj-fe-core/icons';
+可在 `apps/xxx/src/assets/` 目录下新增svg图标文件：
 
-export const MdiKeyboardEsc = createIconifyIcon('mdi:keyboard-esc');
-```
+## 使用
 
-### 使用
+### 1. Iconify组件方式
 
 ```vue
 <script setup lang="ts">
-import { MdiKeyboardEsc } from '@hj-fe/icons';
+import { HjIcon } from '@hj-fe/icons';
 </script>
 
 <template>
-  <!-- 一个宽高为20px的图标 -->
-  <MdiKeyboardEsc class="size-5" />
+  <HjIcon icon="vscode-icons--file-type-tailwind" class="text-8xl" />
 </template>
 ```
 
-## Svg 图标 <Badge text="推荐" type="tip"/>
+### 2. Tailwind CSS方式
 
-没有采用 Svg Sprite 的方式，而是直接引入 Svg 图标，
-
-### 新增
-
-可以在 `packages/icons/src/svg/icons` 目录下新增图标文件`test.svg`, 然后在 `packages/icons/src/svg/index.ts` 中引入：
-
-```ts
-// packages/icons/src/svg/index.ts
-import { createIconifyIcon } from '@hj-fe-core/icons';
-
-const SvgTestIcon = createIconifyIcon('svg:test');
-
-export { SvgTestIcon };
-```
-
-### 使用
-
-```vue
-<script setup lang="ts">
-import { SvgTestIcon } from '@hj-fe/icons';
-</script>
-
-<template>
-  <!-- 一个宽高为20px的图标 -->
-  <SvgTestIcon class="size-5" />
-</template>
-```
-
-## Tailwind CSS 图标
-
-### 使用
-
-直接添加 Tailwind CSS 的图标类名即可使用，图标类名可查看 [iconify](https://github.com/iconify/iconify) ：
+直接添加 Tailwind CSS 的图标类名即可使用
 
 ```vue
 <span class="icon-[mdi--ab-testing]"></span>
+<span class="icon-[custom--play] text-8xl"></span>
 ```
+
+::: tip  svg单文件组件组件方式
+
+- 支持将svg放在 `apps/xxx/src/assets/` 目录下的文件，直接转换成组件。
+- 因方式不支持文件子路径，目前已经注释该方式，后续有需要再调整vite配置
+
+:::

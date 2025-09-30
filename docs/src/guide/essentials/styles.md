@@ -43,7 +43,7 @@ $font-size: 30px;
 </style>
 ```
 
-## Tailwind CSS
+## Tailwind CSS <Badge text="推荐" type="tip"/>
 
 项目中集成了 [Tailwind CSS](https://tailwindcss.com/)，可以在项目中使用 `tailwindcss` 的类名，快速构建页面。
 

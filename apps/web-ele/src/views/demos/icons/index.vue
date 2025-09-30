@@ -55,6 +55,7 @@ import { HjIcon } from '@hj-fe/icons';
       <HjIcon icon="custom:play" class="text-8xl" />
       <HjIcon icon="custom--play" class="text-8xl" />
       <HjIcon icon="custom--demos-play" class="text-8xl" />
+      <HjIcon icon="vscode-icons--file-type-tailwind" class="text-8xl" />
     </el-card>
   </Page>
 </template>

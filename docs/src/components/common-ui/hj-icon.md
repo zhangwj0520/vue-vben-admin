@@ -1,166 +1,50 @@
----
-outline: deep
----
+# 图标
 
-# Icon组件
+::: tip 关于图标的管理
 
-框架提供的一些用于轻量提示的弹窗，仅使用js代码即可快速动态创建提示而不需要在template写任何代码。
-
-::: info 应用场景
-
-Alert提供的功能与Modal类似，但只适用于简单应用场景。例如临时性、动态地弹出模态确认框、输入框等。如果对弹窗有更复杂的需求，请使用VbenModal
+- 项目的图标主要由`@hj-fe/icons`包提供，建议统一在该包内部管理，以便于统一管理和维护。
+- 如果你使用的是 `Vscode`，推荐安装 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) 插件，可以方便的查找和使用图标。
 
 :::
 
-::: tip 注意
+项目中有以下多种图标使用方式，可以根据实际情况选择使用：
 
-Alert提供的快捷方法alert、confirm、prompt动态创建的弹窗在已打开的情况下，不支持HMR（热更新），代码变更后需要关闭这些弹窗后重新打开。
+## 图标来源
 
-:::
+### 1. Iconify 图标
 
-::: tip README
+集成了 [iconify](https://github.com/iconify/iconify) 图标库，自动导入
 
-下方示例代码中的，存在一些主题色未适配、样式缺失的问题，这些问题只在文档内会出现，实际使用并不会有这些问题，可忽略，不必纠结。
+### 2. Svg文件 图标
 
-:::
+可在 `apps/xxx/src/assets/` 目录下新增svg图标文件：
 
-## 基础用法
+## 使用
 
-使用 `alert` 创建只有一个确认按钮的提示框。
+### 1. Iconify组件方式
 
-<DemoPreview dir="demos/vben-alert/alert" />
+```vue
+<script setup lang="ts">
+import { HjIcon } from '@hj-fe/icons';
+</script>
 
-使用 `confirm` 创建有确认和取消按钮的提示框。
-
-<DemoPreview dir="demos/vben-alert/confirm" />
-
-使用 `prompt` 创建有确认和取消按钮、接受用户输入的提示框。
-
-<DemoPreview dir="demos/vben-alert/prompt" />
-
-## useAlertContext
-
-当弹窗的content、footer、icon使用自定义组件时，在这些组件中可以使用 `useAlertContext` 获取当前弹窗的上下文对象，用来主动控制弹窗。
-
-::: tip 注意
-
-`useAlertContext`只能用在setup或者函数式组件中。
-
-:::
-
-### Methods
-
-| 方法      | 描述               | 类型     | 版本要求 |
-| --------- | ------------------ | -------- | -------- |
-| doConfirm | 调用弹窗的确认操作 | ()=>void | >5.5.4   |
-| doCancel  | 调用弹窗的取消操作 | ()=>void | >5.5.4   |
-
-## 类型说明
-
-```ts
-/** 预置的图标类型 */
-export type IconType = 'error' | 'info' | 'question' | 'success' | 'warning';
-
-export type BeforeCloseScope = {
-  /** 是否为点击确认按钮触发的关闭 */
-  isConfirm: boolean;
-};
-
-/**
- * alert 属性
- */
-export type AlertProps = {
-  /** 关闭前的回调，如果返回false，则终止关闭 */
-  beforeClose?: (
-    scope: BeforeCloseScope,
-  ) => boolean | Promise<boolean | undefined> | undefined;
-  /** 边框 */
-  bordered?: boolean;
-  /** 按钮对齐方式 */
-  buttonAlign?: 'center' | 'end' | 'start';
-  /** 取消按钮的标题 */
-  cancelText?: string;
-  /** 是否居中显示 */
-  centered?: boolean;
-  /** 确认按钮的标题 */
-  confirmText?: string;
-  /** 弹窗容器的额外样式 */
-  containerClass?: string;
-  /** 弹窗提示内容 */
-  content: Component | string;
-  /** 弹窗内容的额外样式 */
-  contentClass?: string;
-  /** 执行beforeClose回调期间，在内容区域显示一个loading遮罩*/
-  contentMasking?: boolean;
-  /** 弹窗底部内容（与按钮在同一个容器中） */
-  footer?: Component | string;
-  /** 弹窗的图标（在标题的前面） */
-  icon?: Component | IconType;
-  /**
-   * 弹窗遮罩模糊效果
-   */
-  overlayBlur?: number;
-  /** 是否显示取消按钮 */
-  showCancel?: boolean;
-  /** 弹窗标题 */
-  title?: string;
-};
-
-/** prompt 属性 */
-export type PromptProps<T = any> = {
-  /** 关闭前的回调，如果返回false，则终止关闭 */
-  beforeClose?: (scope: {
-    isConfirm: boolean;
-    value: T | undefined;
-  }) => boolean | Promise<boolean | undefined> | undefined;
-  /** 用于接受用户输入的组件 */
-  component?: Component;
-  /** 输入组件的属性 */
-  componentProps?: Recordable<any>;
-  /** 输入组件的插槽 */
-  componentSlots?: Recordable<Component>;
-  /** 默认值 */
-  defaultValue?: T;
-  /** 输入组件的值属性名 */
-  modelPropName?: string;
-} & Omit<AlertProps, 'beforeClose'>;
-
-/**
- * 函数签名
- * alert和confirm的函数签名相同。
- * confirm默认会显示取消按钮，而alert默认只有一个按钮
- *  */
-export function alert(options: AlertProps): Promise<void>;
-export function alert(
-  message: string,
-  options?: Partial<AlertProps>,
-): Promise<void>;
-export function alert(
-  message: string,
-  title?: string,
-  options?: Partial<AlertProps>,
-): Promise<void>;
-
-/**
- * 弹出输入框的函数签名。
- * beforeClose的参数会传入用户当前输入的值
- * component指定接受用户输入的组件，默认为Input
- * componentProps 为输入组件设置的属性数据
- * defaultValue 默认的值
- * modelPropName 输入组件的值属性名称。默认为modelValue
- */
-export async function prompt<T = any>(
-  options: Omit<AlertProps, 'beforeClose'> & {
-    beforeClose?: (
-      scope: BeforeCloseScope & {
-        /** 输入组件的当前值 */
-        value: T;
-      },
-    ) => boolean | Promise<boolean | undefined> | undefined;
-    component?: Component;
-    componentProps?: Recordable<any>;
-    defaultValue?: T;
-    modelPropName?: string;
-  },
-): Promise<T | undefined>;
+<template>
+  <HjIcon icon="vscode-icons--file-type-tailwind" class="text-8xl" />
+</template>
 ```
+
+### 2. Tailwind CSS方式
+
+直接添加 Tailwind CSS 的图标类名即可使用
+
+```vue
+<span class="icon-[mdi--ab-testing]"></span>
+<span class="icon-[custom--play] text-8xl"></span>
+```
+
+::: tip  svg单文件组件组件方式
+
+- 支持将svg放在 `apps/xxx/src/assets/` 目录下的文件，直接转换成组件。
+- 因方式不支持文件子路径，目前已经注释该方式，后续有需要再调整vite配置
+
+:::

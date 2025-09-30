@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { message } from 'ant-design-vue';
 
-import { useVbenForm, z } from '@/adapter/form';
+import { useVbenForm, z } from '../../../_env/adapter/form';
 
 const [Form] = useVbenForm({
   // 所有表单项共用，可单独在表单内覆盖

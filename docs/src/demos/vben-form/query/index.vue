@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { message } from 'ant-design-vue';
 
-import { useVbenForm } from '@/adapter/form';
+import { useVbenForm } from '../../../_env/adapter/form';
 
 const [QueryForm] = useVbenForm({
   // 默认展开

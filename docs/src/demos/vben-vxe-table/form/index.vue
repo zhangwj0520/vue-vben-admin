@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-import type { VbenFormProps } from '@/adapter/form';
-import type { VxeGridProps } from '@/adapter/vxe-table';
+import type { VbenFormProps } from '../../../_env/adapter/form';
+import type { VxeGridProps } from '../../../_env/adapter/vxe-table';
 
 import { message } from 'ant-design-vue';
 
-import { useVbenVxeGrid } from '@/adapter/vxe-table';
-
+import { useVbenVxeGrid } from '../../../_env/adapter/vxe-table';
 import { getExampleTableApi } from '../mock-api';
 
 interface RowType {
