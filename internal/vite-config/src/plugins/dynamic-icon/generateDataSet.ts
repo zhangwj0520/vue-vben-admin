@@ -53,11 +53,7 @@ const generateDataSet = async (dirPath: string, prefix?: string) => {
   });
   const newCollection = await customSet.export();
 
-  const outFile = join(
-    process.cwd(),
-    'src/assets/iconset',
-    `${prefix}.json`,
-  );
+  const outFile = join(process.cwd(), 'src/assets/iconset', `${prefix}.json`);
 
   let shouldWrite = true;
 

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Page } from '@vben/common-ui';
+
 import { VbenIcon } from '@vben-core/shadcn-ui';
 </script>
 

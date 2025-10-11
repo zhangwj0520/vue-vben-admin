@@ -18,6 +18,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import viteVueDevTools from 'vite-plugin-vue-devtools';
 
 import { viteArchiverPlugin } from './archiver';
+import addIconSetPlugin from './dynamic-icon';
 import { viteExtraAppConfigPlugin } from './extra-app-config';
 import { viteImportMapPlugin } from './importmap';
 import { viteInjectAppLoadingPlugin } from './inject-app-loading';
@@ -27,7 +28,6 @@ import { viteNitroMockPlugin } from './nitro-mock';
 import { vitePrintPlugin } from './print';
 import unplugin from './unplugin';
 import { viteVxeTableImportsPlugin } from './vxe-table';
-import addIconSetPlugin from './dynamic-icon';
 
 /**
  * 获取条件成立的 vite 插件

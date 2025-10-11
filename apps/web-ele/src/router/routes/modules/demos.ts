@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = [
         path: '/demos/form',
         component: () => import('#/views/demos/form/basic.vue'),
       },
-           {
+      {
         meta: {
           title: $t('demos.icons'),
           icon: 'mdi:abjad-hebrew',
