@@ -3,7 +3,6 @@ import { ref } from 'vue';
 
 import { Page } from '@vben/common-ui';
 
-
 type NotificationType = 'error' | 'info' | 'success' | 'warning';
 
 function info() {

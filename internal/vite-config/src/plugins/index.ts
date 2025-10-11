@@ -25,8 +25,9 @@ import { viteMetadataPlugin } from './inject-metadata';
 import { viteLicensePlugin } from './license';
 import { viteNitroMockPlugin } from './nitro-mock';
 import { vitePrintPlugin } from './print';
-import { viteVxeTableImportsPlugin } from './vxe-table';
 import unplugin from './unplugin';
+import { viteVxeTableImportsPlugin } from './vxe-table';
+import addIconSetPlugin from './dynamic-icon';
 
 /**
  * 获取条件成立的 vite 插件
@@ -122,6 +123,21 @@ async function loadApplicationPlugins(
     {
       condition: true,
       plugins: () => unplugin(),
+    },
+    {
+      condition: true,
+      plugins: () => [
+        addIconSetPlugin([
+          {
+            path: `${process.cwd()}/src/assets/system`,
+            prefix: 'system',
+          },
+          {
+            path: `${process.cwd()}/src/assets/custom`,
+            prefix: 'custom',
+          },
+        ]),
+      ],
     },
     {
       condition: i18n,

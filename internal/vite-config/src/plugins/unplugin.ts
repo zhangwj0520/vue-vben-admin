@@ -41,9 +41,7 @@ export default function unplugin() {
       dts: './src/typings/components.d.ts',
       types: [{ from: 'vue-router', names: ['RouterLink', 'RouterView'] }],
       // ui库解析器
-      resolvers: [
-        ElementPlusResolver(),
-      ],
+      resolvers: [ElementPlusResolver()],
     }),
   ];
 }

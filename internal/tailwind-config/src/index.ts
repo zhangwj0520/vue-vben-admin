@@ -126,7 +126,18 @@ export default {
   plugins: [
     animate,
     typographyPlugin,
-    addDynamicIconSelectors(),
+     addDynamicIconSelectors({
+      iconSets: {
+        system: path.join(
+          process.cwd(),
+          'src/iconset/system.json',
+        ),
+        custom: path.join(
+          process.cwd(),
+          'src/iconset/custom.json',
+        ),
+      },
+    }),
     enterAnimationPlugin,
   ],
   prefix: '',

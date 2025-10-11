@@ -3,7 +3,6 @@ import { h } from 'vue';
 
 import { Page, useVbenDrawer } from '@vben/common-ui';
 
-
 import { useVbenForm } from '#/adapter/form';
 import { getAllMenusApi } from '#/api';
 
