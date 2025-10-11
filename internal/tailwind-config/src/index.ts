@@ -128,8 +128,8 @@ export default {
     typographyPlugin,
     addDynamicIconSelectors({
       iconSets: {
-        system: path.join(process.cwd(), 'src/iconset/system.json'),
-        custom: path.join(process.cwd(), 'src/iconset/custom.json'),
+        system: path.join(process.cwd(), 'src/assets/system/iconset.json'),
+        custom: path.join(process.cwd(), 'src/assets/custom/iconset.json'),
       },
     }),
     enterAnimationPlugin,

@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { Page } from '@vben/common-ui';
-
-import { VbenIcon } from '@vben-core/shadcn-ui';
+import { HjIcon } from '@vben/icons';
 </script>
 
 <template>
-  <Page description="ICON使用演示11" title="ICON">
+  <Page description="ICON使用演示111222" title="ICON">
     <el-card>
       <template #header>
         <div class="card-header">
@@ -46,17 +45,18 @@ import { VbenIcon } from '@vben-core/shadcn-ui';
     <el-card>
       <template #header>
         <div class="card-header">
-          <span>组件方式--VbenIcon</span>
+          <span>组件方式--HjIcon</span>
         </div>
       </template>
-      <VbenIcon class="text-8xl" icon="custom:logo" />
-      <VbenIcon class="text-8xl" icon="system:download" />
+      <HjIcon class="text-8xl" icon="custom-logo" />
+      <HjIcon class="text-8xl" icon="custom:logo" />
+      <HjIcon class="text-8xl" icon="system:download" />
       <div>11</div>
-      <VbenIcon icon="svg:avatar-1" class="text-8xl" />
-      <VbenIcon icon="custom:play" class="text-8xl" />
-      <VbenIcon icon="custom--play" class="text-8xl" />
-      <VbenIcon icon="custom--demos-play" class="text-8xl" />
-      <VbenIcon icon="vscode-icons--file-type-tailwind" class="text-8xl" />
+      <HjIcon icon="svg:avatar-1" class="text-8xl" />
+      <HjIcon icon="custom:play" class="text-8xl" />
+      <HjIcon icon="custom--play" class="text-8xl" />
+      <HjIcon icon="custom--demos-play" class="text-8xl" />
+      <HjIcon icon="vscode-icons--file-type-tailwind" class="text-8xl" />
     </el-card>
   </Page>
 </template>
