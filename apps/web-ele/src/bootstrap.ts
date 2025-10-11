@@ -4,14 +4,11 @@ import { registerAccessDirective } from '@vben/access';
 import { registerLoadingDirective } from '@vben/common-ui';
 import { preferences } from '@vben/preferences';
 import { initStores } from '@vben/stores';
-
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
 import '@vben/styles';
 import '@vben/styles/ele';
 
 import { useTitle } from '@vueuse/core';
-import { ElLoading } from 'element-plus';
+// import  { ElLoading } from 'element-plus';
 
 import { $t, setupI18n } from '#/locales';
 
@@ -20,7 +17,7 @@ import { initSetupVbenForm } from './adapter/form';
 import App from './app.vue';
 import { router } from './router';
 
-
+import 'element-plus/dist/index.css';
 
 async function bootstrap(namespace: string) {
   // 初始化组件适配器
@@ -38,10 +35,10 @@ async function bootstrap(namespace: string) {
   //   zIndex: 2000,
   // });
   const app = createApp(App);
-  app.use(ElementPlus)
+  // app.use(ElementPlus);
 
   // 注册Element Plus提供的v-loading指令
-  app.directive('loading', ElLoading.directive);
+  // app.directive('loading', ElLoading.directive);
 
   // 注册Vben提供的v-loading和v-spinning指令
   registerLoadingDirective(app, {

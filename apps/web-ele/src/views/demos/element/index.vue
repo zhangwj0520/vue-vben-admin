@@ -3,15 +3,6 @@ import { ref } from 'vue';
 
 import { Page } from '@vben/common-ui';
 
-import {
-  ElButton,
-  ElCard,
-  ElMessage,
-  ElNotification,
-  ElSegmented,
-  ElSpace,
-  ElTable,
-} from 'element-plus';
 
 type NotificationType = 'error' | 'info' | 'success' | 'warning';
 
@@ -103,13 +94,13 @@ const segmentedOptions = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       <ElCard class="mb-5 w-80">
         <template #header> V-Loading </template>
         <div class="flex size-72 items-center justify-center" v-loading="true">
-          一些演示的内容
+          一些演示的内容2
         </div>
       </ElCard>
       <ElCard class="mb-5 w-80">
         <ElTable :data="tableData" stripe>
-          <ElTable.TableColumn label="测试列1" prop="prop1" />
-          <ElTable.TableColumn label="测试列2" prop="prop2" />
+          <ElTableColumn label="测试列1" prop="prop1" />
+          <ElTableColumn label="测试列2" prop="prop2" />
         </ElTable>
       </ElCard>
     </div>

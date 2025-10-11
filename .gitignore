@@ -50,3 +50,6 @@ vite.config.ts.*
 *.sw?
 .history
 .cursor
+apps/web-ele/src/typings/auto-imports.d.ts
+apps/web-ele/src/typings/components.d.ts
+apps/web-ele/.eslintrc-auto-import.json
