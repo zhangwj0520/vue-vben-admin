@@ -23,6 +23,7 @@
     "typecheck": "vue-tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
     "@hj-fe/access": "workspace:*",
     "@hj-fe/common-ui": "workspace:*",
     "@hj-fe/constants": "workspace:*",
@@ -41,6 +42,7 @@
     "@vueuse/core": "catalog:",
     "dayjs": "catalog:",
     "element-plus": "catalog:",
+    "file-saver": "^2.0.5",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"

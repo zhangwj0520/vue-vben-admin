@@ -1,7 +1,15 @@
 <script lang="ts" setup>
+import type { CollapseModelValue } from 'element-plus';
+
+import { CaretRight } from '@element-plus/icons-vue';
 import { deepClone } from '@hj-meta2d/core';
 
 defineOptions({ name: '图形' });
+
+const activeNames = ref(['1']);
+const handleChange = (val: CollapseModelValue) => {
+  console.log('handleChange', val);
+};
 const graphicGroups = [
   {
     name: '和嘉图形',
@@ -977,81 +985,40 @@ const addShape = (e: any, elem: any) => {
 
 <template>
   <div class="graphics">
-    <t-collapse :default-expand-all="true">
-      <t-collapse-panel
-        :header="item.name"
+    <el-collapse v-model="activeNames" @change="handleChange" class="w-[290px]">
+      <el-collapse-item
+        :title="item.name"
+        :name="item.name"
+        :icon="CaretRight"
         v-for="item in graphicGroups"
         :key="item.name"
       >
-        <template :key="elem.name" v-for="elem in item.list">
-          <div
-            class="graphic"
-            :draggable="true"
-            @dragstart="dragStart($event, elem)"
-            @click.prevent="dragStart($event, elem)"
-            @dblclick="addShape($event, elem)"
-          >
-            <svg class="l-icon" aria-hidden="true">
-              <use :xlink:href="`#${elem.icon}`" />
-            </svg>
-            <p :title="elem.name">{{ elem.name }}</p>
-          </div>
-        </template>
-      </t-collapse-panel>
-    </t-collapse>
+        <div class="grid grid-cols-4 gap-3 px-1 py-4">
+          <template :key="elem.name" v-for="elem in item.list">
+            <div
+              class="rounded-sm border-transparent bg-slate-400 py-3"
+              :draggable="true"
+              @dragstart="dragStart($event, elem)"
+              @click.prevent="dragStart($event, elem)"
+              @dblclick="addShape($event, elem)"
+            >
+              <svg class="l-icon" aria-hidden="true">
+                <use :xlink:href="`#${elem.icon}`" />
+              </svg>
+              <p :title="elem.name">{{ elem.name }}</p>
+            </div>
+          </template>
+        </div>
+      </el-collapse-item>
+    </el-collapse>
   </div>
 </template>
 <style lang="css" scoped>
 .graphics {
   z-index: 2;
   height: calc(100vh - 80px);
+  overflow-y: scroll;
   overflow-y: auto;
   border-right: 1px solid var(--color-border);
-}
-
-.graphics :deep(.t-collapse) {
-  border-top: none;
-}
-
-.graphics :deep(.t-collapse) .t-collapse-panel__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 12px;
-  padding: 20px 4px;
-  background-color: var(--color-background-active);
-}
-
-.graphics :deep(.t-collapse) .graphic {
-  position: relative;
-  padding: 10px 0;
-  border: 1px solid transparent;
-  border-radius: 2px;
-}
-
-.graphics :deep(.t-collapse) .graphic:hover {
-  cursor: pointer;
-  border-color: var(--color-primary);
-}
-
-.graphics :deep(.t-collapse) .graphic p {
-  display: -webkit-box;
-  height: 12px;
-  padding: 0 8px;
-  margin-top: 6px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  font-size: 12px;
-  line-height: 1;
-  text-align: center;
-  word-break: break-all;
-  -webkit-box-orient: vertical;
-}
-
-.graphics :deep(.t-collapse) .graphic svg {
-  width: 100%;
-  height: 28px;
-  margin: auto;
-  color: var(--color);
 }
 </style>

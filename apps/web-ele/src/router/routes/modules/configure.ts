@@ -26,7 +26,8 @@ const routes: RouteRecordRaw[] = [
       },
       {
         meta: {
-          title: $t('page.configure.preview'),
+          // $t('page.configure.preview'),
+          title: $t('page.configure.yulan'),
           icon: 'token-branded:tusd',
         },
         name: 'configure-preview',

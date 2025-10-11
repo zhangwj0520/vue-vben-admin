@@ -1,31 +1,27 @@
 <script lang="tsx" setup>
+import type { TabsPaneContext } from 'element-plus';
+
 // import type { TabPanelProps } from 'tdesign-vue-next';
 import { ref } from 'vue';
 
 import DataProps from './data-props.vue';
 import PaperProps from './paper-props.vue';
 
-const value = ref(1);
-const panelRender = () => {
-  return <p style="padding: 25px;">选项卡3的内容，使用 t-tab-panel 渲染</p>;
+const activeName = ref('first');
+
+const handleClick = (tab: TabsPaneContext, event: Event) => {
+  console.log(tab, event);
 };
 </script>
 
 <template>
-  <t-tabs
-    v-model="value"
-    class="z-10 flex h-[calc(100vh-80px)] flex-col border-l border-gray-200 p-4"
-  >
-    <t-tab-panel :value="1" label="图纸" :destroy-on-hide="false">
-      <PaperProps />
-    </t-tab-panel>
-    <t-tab-panel :value="2" label="数据" :destroy-on-hide="false">
-      <template #panel>
-        <DataProps />
-      </template>
-    </t-tab-panel>
-    <t-tab-panel :value="3" label="设备" :panel="panelRender" />
-  </t-tabs>
+  <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+    <el-tab-pane label="图纸" name="first"> <PaperProps /></el-tab-pane>
+    <el-tab-pane label="数据" name="second"><DataProps /></el-tab-pane>
+    <el-tab-pane label="设备" name="third">
+      <p style="padding: 25px">选项卡3的内容，使用 t-tab-panel 渲染</p>
+    </el-tab-pane>
+  </el-tabs>
 </template>
 <style lang="css" scoped>
 .t-tab-panel {

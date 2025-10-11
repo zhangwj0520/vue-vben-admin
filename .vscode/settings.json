@@ -197,9 +197,9 @@
   "cssVariables.lookupFiles": ["packages/core/base/design/src/**/*.css"],
 
   "i18n-ally.localesPaths": [
-    "packages/locales/src/langs",
-    "playground/src/locales/langs",
-    "apps/*/src/locales/langs"
+    "apps/web-ele/src/locales/langs",
+    "packages/locales/src/langs"
+    // "playground/src/locales/langs"
   ],
   "i18n-ally.pathMatcher": "{locale}/{namespace}.{ext}",
   "i18n-ally.enabledParsers": ["json"],

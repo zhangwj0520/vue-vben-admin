@@ -53,3 +53,5 @@ vite.config.ts.*
 packages/icons/src/iconset/system.json
 packages/icons/src/iconset/custom.json
 packages/icons/src/iconset/custom.json
+packages/icons/src/iconset/custom.json
+packages/icons/src/iconset/system.json

@@ -3,7 +3,10 @@ import { onMounted } from 'vue';
 
 import { useMate2dStore } from '@/store';
 
+import Graphics from '../components/graphics.vue';
 import Header from '../components/header.vue';
+import Props from '../components/props.vue';
+import View from '../components/view.vue';
 
 const { setMate2dData } = useMate2dStore();
 
@@ -36,11 +39,13 @@ onMounted(() => {
   <div class="h-screen overflow-hidden">
     <Header />
 
-    <!-- <div class="grid grid-cols-[300px_1fr_301px]">
+    <div class="grid grid-cols-[300px_1fr_301px]">
       <Graphics />
       <View />
       <Props />
-    </div> -->
+      <!--
+       -->
+    </div>
   </div>
 </template>
 
