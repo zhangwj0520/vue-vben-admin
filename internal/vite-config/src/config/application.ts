@@ -66,7 +66,7 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
             entryFileNames: 'jse/index-[name]-[hash].js',
           },
         },
-        target: 'es2015',
+        target: 'es2022',
       },
       css: createCssOptions(injectGlobalScss),
       esbuild: {

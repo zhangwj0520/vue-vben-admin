@@ -21,8 +21,18 @@ const routes: RouteRecordRaw[] = [
           openInNewWindow: true,
         },
         name: 'configure-editor',
-        path: '/configure/tdesign',
+        path: '/configure/editor',
         component: () => import('@/views/configure/editor/index.vue'),
+      },
+      {
+        meta: {
+          title: $t('page.configure.editor'),
+          icon: 'token-branded:tusd',
+          openInNewWindow: true,
+        },
+        name: 'configure-editor-old',
+        path: '/configure/tdesign',
+        component: () => import('@/views/configure2/editor/index.vue'),
       },
       {
         meta: {
@@ -32,7 +42,7 @@ const routes: RouteRecordRaw[] = [
         },
         name: 'configure-preview',
         path: '/configure/preview',
-        component: () => import('@/views/configure/preview/index.vue'),
+        component: () => import('@/views/configure2/preview/index.vue'),
       },
     ],
   },
