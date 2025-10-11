@@ -21,7 +21,13 @@ function addIconSetPlugin(list: IIconSetPluginProps[]): Plugin {
         watcher.add(path);
         // watcher.unwatch(`${path}/custom.json`);
         // 监听文件添加
-        watcher.on('all', () => {
+        // watcher.on('all', () => {
+        //   generateDataSet(path, prefix);
+        // });
+        watcher.on('add', () => {
+          generateDataSet(path, prefix);
+        });
+        watcher.on('unlink', () => {
           generateDataSet(path, prefix);
         });
       });

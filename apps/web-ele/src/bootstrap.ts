@@ -8,7 +8,6 @@ import '@hj-fe/styles';
 import '@hj-fe/styles/ele';
 
 import { useTitle } from '@vueuse/core';
-import ElementPlus, { ElLoading } from 'element-plus';
 
 import { $t, setupI18n } from '@/locales';
 
@@ -35,11 +34,6 @@ async function bootstrap(namespace: string) {
   //   zIndex: 2000,
   // });
   const app = createApp(App);
-
-  app.use(ElementPlus);
-
-  // 注册Element Plus提供的v-loading指令
-  app.directive('loading', ElLoading.directive);
 
   // 注册Vben提供的v-loading和v-spinning指令
   registerLoadingDirective(app, {

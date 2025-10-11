@@ -7,7 +7,7 @@ defineOptions({ name: 'HjConfigure' });
     <div class="flex h-12 items-center border-b border-[#E7E7E7] px-4 py-2">
       <span class="icon-[ep--arrow-left]"></span>
       <span class="icon-[ep--fold]"></span>
-      <span class="ml-2 font-medium">配置化编辑器111</span>
+      <span class="ml-2 font-medium">配置化编辑器</span>
       <el-divider direction="vertical" />
       <span class="icon-[system-uicons--reset]"></span>
       <span class="icon-[system-uicons--reset]"></span>
